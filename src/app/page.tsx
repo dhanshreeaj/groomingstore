@@ -12,8 +12,9 @@ export default function Home() {
         flexDirection: { xs: "column", md: "row" },
         alignItems: "center",
         justifyContent: "space-between",
-        padding: 4,
-        gap: 4,
+        padding: 15,
+        gap: 9,
+        backgroundColor:"white"
       }}
     >
       {/*Left side text contenet */}
