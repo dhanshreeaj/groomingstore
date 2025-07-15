@@ -1,23 +1,16 @@
 "use client";
 
-import { createTheme } from "@mui/material";
+import { CssBaseline,ThemeProvider } from "@mui/material";
 import Navbar from "./components/Navbar";
-import ThemeRegistery from "./components/ThemeRegistery";
-
-const theme =createTheme({
-    palette:{
-        mode:"dark"
-    }
-})
+import Home from "./page";
 
 export default function RootLayout({children}:{children:React.ReactNode}){
     return(
         <html>
             <body>
-                <ThemeRegistery>
-                    <Navbar/>
-                    {children}
-                </ThemeRegistery>
+                <CssBaseline/>
+                <Navbar/>
+                <Home/>
             </body>
         </html>
     )
