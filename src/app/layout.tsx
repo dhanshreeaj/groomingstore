@@ -4,6 +4,7 @@ import { CssBaseline} from "@mui/material";
 import Navbar from "./components/Navbar";
 import Home from "./page";
 import CardIcon from "./components/cardicons";
+import ProductFeatures from "./components/productfeature";
 
 export default function RootLayout({children}:{children:React.ReactNode}){
     return(
@@ -13,6 +14,7 @@ export default function RootLayout({children}:{children:React.ReactNode}){
                 <Navbar/>
                 <Home/>
                 <CardIcon/>
+                <ProductFeatures/>
             </body>
         </html>
     )
