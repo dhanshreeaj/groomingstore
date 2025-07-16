@@ -10,9 +10,13 @@ export default function ProductsPages(){
             display:"flex",
             padding:8,
             gap:2,
-            justifyContent:"center",
-            backgroundColor:"black"
+            backgroundColor:"black",
+            height:950,
+            alignItems:"center",
+            flexDirection:"column"
+
         }}>
+            {/*first box section */}
             {/*products contain */}
             <Box sx={{
                 display:"flex",
@@ -20,7 +24,7 @@ export default function ProductsPages(){
                 height:400,
                 width:1100,
                 gap:1.5,
-                paddingY:9
+                paddingY:9,marginBottom:2
             }}>
                 {/*left section */}
             <Box sx={{
@@ -160,7 +164,97 @@ export default function ProductsPages(){
                 </Box>
             </Box>
         </Box>
+
+        {/*second box section */}
+        {/* product category */}
+        <Box sx={{
+           display:"flex",
+                backgroundColor:"white",
+                height:400,
+                width:1100,
+                gap:1.5
+        }}>
+            {/*product image by category */}
+           <Box sx={{
+            width:366,
+            height:400,
+            paddingX:8
+           }}>
+            <Typography variant="subtitle1" color="black" fontSize={14}  paddingY={4} align="center" >PRODUCT BY CATEGORY</Typography>
+            {/*image section of product */}
+            <Box sx={{
+                display:"flex",
+                backgroundColor:"lightgray",
+                width:250,
+                height:250,
+                borderRadius:"20px",
+                justifyContent:"center"
+            }}>
+                <Image src="/perfum.png"
+                alt="Product image"
+                width={200}
+                height={200}
+                style={{objectFit:"cover"}}
+                />
+            </Box>
+            </Box> 
+
+           {/*product category name */}
+           <Box sx={{
+            width:366,
+            height:400,
+            paddingX:8,
+            paddingY:10
+           }}>
+            <Typography variant="h3" color="grey"  fontSize={45}
+            sx={{
+                cursor:"pointer",
+                transition:"color 0.3s ease",
+                 "&:hover":{
+                            color:"black",
+                        }
+            }}>Face Care</Typography> <br/>
+            <Typography variant="h3" color="grey" fontSize={45}
+              sx={{
+                cursor:"pointer",
+                transition:"color 0.3s ease",
+                 "&:hover":{
+                            color:"black",
+                        }
+            }}>Body Care</Typography> <br/>
+            <Typography variant="h3" color="grey"  fontSize={45}
+              sx={{
+                cursor:"pointer",
+                transition:"color 0.3s ease",
+                 "&:hover":{
+                            color:"black",
+                        }
+            }}>Hair Care</Typography> 
+            </Box> 
+
+           {/*product details */}
+            <Box sx={{
+            width:366,
+            height:400,
+             paddingX:3,
+            paddingY:10
+           }}>
+             <Typography variant="h6" color="black"  fontSize={24} fontWeight="bold" >
+                   Kahf Body Care
+                </Typography>
+                <Typography variant="h6" color="black"  fontSize={12} >
+                    kahf elevates your daliy routine blending care,confidenece and community in every moment.
+                </Typography><br/>
+                <Stack direction="row" spacing={4}>
+                <Button  variant="outlined" 
+                sx={{ color:"black",bgcolor:"white",textTransform:"none", borderRadius:"30px",borderColor:"black"}}>View Our Collections</Button>
+                <Button variant="outlined"
+                 sx={{color:"black",bgcolor:"white",borderColor:"black",textTransform:"none", borderRadius:"15px"}}>→</Button></Stack>
+           </Box>
+
         </Box>
+        </Box>
+        
         </>
     )
 }
