@@ -6,7 +6,7 @@ import Home from "./page";
 import CardIcon from "./components/cardicons";
 import ProductFeatures from "./components/productfeature";
 
-export default function RootLayout({children}:{children:React.ReactNode}){
+export default function RootLayout({}:{children:React.ReactNode}){
     return(
         <html>
             <body>

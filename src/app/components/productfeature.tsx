@@ -52,7 +52,7 @@ export default function ProductFeatures(){
                     </Typography><br/>
                     <Typography variant="h6" color="white" align="center" fontSize={12}>
                         From  route maintance to major repairs,<br/>
-                        We've got your car coverd with reliable and friendly service.
+                        We got your car coverd with reliable and friendly service.
                     </Typography><br/><br/>
                 <Box sx={{
                     justifyContent:"center",
