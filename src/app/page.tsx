@@ -20,12 +20,12 @@ export default function Home() {
       {/*Left side text contenet */}
       <Box
       sx={{flex:1}}>
-        <Typography variant="h2" fontWeight="bold">
+        <Typography variant="h2" fontWeight="bold" >
           Clean Looks No Compromise
-        </Typography>
-        <Typography variant="h4">
+        </Typography><br/>
+        <Typography variant="h5">
           Effortless routines, clean formulas, no fluff.This is grooming without the vanity.
-        </Typography>
+        </Typography><br/>
         <Button sx={{color:"white", textTransform:"none", backgroundColor:"black"}}>View Collection</Button>
       </Box>
 

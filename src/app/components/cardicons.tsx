@@ -25,10 +25,10 @@ export default function CardIcon(){
             }}>
                 {/*text part */}
                <Box sx={{padding:4,justifyContent:"center"}}>
-                <Typography variant="h3" fontWeight="bold"align="center">
+                <Typography variant="h4" fontWeight="bold"align="center">
                     Unique Selling Point
                 </Typography><br></br>
-                <Typography variant="h6" align="center">
+                <Typography variant="h6" align="center" fontSize={15}>
                     A unique selling proposition to the unique benifit exhibited <br/>by a company,
                     service product or brands that enabies it so stand out from compotiotions.
                 </Typography><br></br>
@@ -40,7 +40,7 @@ export default function CardIcon(){
                 </Box>
                 <Box sx={{
                     display:"flex",
-                    padding:2,gap:4
+                    padding:4,gap:4
                 }}>
                     <Box sx={{
                         display:"flex",
@@ -53,7 +53,7 @@ export default function CardIcon(){
                             cursor:"pointer"
                         }
                     }}>
-                        <Typography variant="h6" color="white" padding={2}>
+                        <Typography variant="h6" color="white" padding={2}  fontSize={15}>
                             Automate Ecommerece Operation
                         </Typography>
                     </Box>
@@ -68,9 +68,9 @@ export default function CardIcon(){
                             cursor:"pointer"
                         }
                     }}>
-                        <Typography variant="h6" color="white" padding={2}>
+                        <Typography variant="h6" color="white" padding={2} fontSize={15}>
                             Accurate Accounting Automation
-                        </Typography>
+                        </Typography><br/>
                     </Box>
                     <Box sx={{
                         display:"flex",
@@ -83,7 +83,7 @@ export default function CardIcon(){
                             cursor:"pointer"
                         }
                     }}>
-                        <Typography variant="h6" color="white" padding={2}>
+                        <Typography variant="h6" color="white" padding={2} fontSize={15}>
                            Order Fulifilment Automation
                         </Typography>
                     </Box>
