@@ -70,10 +70,12 @@ export default function ProductFeatures(){
                     justifyContent:"center",
                     padding:2
                 }}>
-                    <Button sx={{
+                    <Button variant="outlined"
+                     sx={{
                         color:"black",
                         bgcolor:"white",
-                        textTransform:"none"
+                        textTransform:"none",
+                        borderColor:"grey"
                     }}>Get a Free quote</Button>
                 </Box>
                 </Box>

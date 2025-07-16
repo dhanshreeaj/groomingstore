@@ -34,8 +34,9 @@ export default function CardIcon(){
                 </Typography><br></br>
                 {/*button part */}
                 <Box sx={{display:"flex",justifyContent:"center"}}>
-                <Button sx={{color:"white", backgroundColor:"black", 
-                    textTransform:"none",justifyContent:"center",borderRadius:"20px"}}>Get Started</Button>
+                <Button variant="outlined"
+                 sx={{color:"black", backgroundColor:"lightgrey", 
+                    textTransform:"none",justifyContent:"center",borderRadius:"20px",borderColor:"black"}}>Get Started</Button>
                 </Box>
                 </Box>
                 <Box sx={{
