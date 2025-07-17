@@ -1,12 +1,11 @@
 "use client";
 
-import { Box, Typography, Button, IconButton } from "@mui/material";
+import { Box, Typography, Button, IconButton,Link, Modal } from "@mui/material";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FaceBookIcon from "@mui/icons-material/Facebook";
-
 export default function Footer() {
     return (
         <>
@@ -250,7 +249,18 @@ export default function Footer() {
                                             color: "black",
                                         }
                                     }}
-                                >Feature Request</Typography><br/>
+                                >Feature Request</Typography>
+                                  <Link href="/faq" style={{ textDecoration: "none" }}>
+                                  <Typography variant="caption" color="grey"
+                                    sx={{
+                                        cursor: "pointer",
+                                        transition: "color 0.3s ease",
+                                        "&:hover": {
+                                            color: "black",
+                                        }
+                                    }}
+                                >FAQ</Typography></Link>
+                                <br/>
                                 <Typography variant="subtitle1" color="black" fontWeight="bold" fontSize={20}>
                                     Blogs
                                 </Typography>
