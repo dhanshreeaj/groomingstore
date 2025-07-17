@@ -6,6 +6,7 @@ import Home from "./page";
 import CardIcon from "./components/cardicons";
 import ProductFeatures from "./components/productfeature";
 import ProductsPages from "./components/productspage";
+import Review from "./components/Review";
 
 export default function RootLayout({}:{children:React.ReactNode}){
     return(
@@ -17,6 +18,7 @@ export default function RootLayout({}:{children:React.ReactNode}){
                 <CardIcon/>
                 <ProductFeatures/>
                 <ProductsPages/>
+                <Review/>
             </body>
         </html>
     )
