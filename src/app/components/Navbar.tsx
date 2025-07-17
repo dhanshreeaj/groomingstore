@@ -4,6 +4,7 @@ import React from "react";
 import { AppBar,Toolbar,Typography,Button,Box,IconButton,Stack } from "@mui/material";
 import  SearchIcon  from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import Link from "next/link";
 
 const Navbar=()=>{
 
@@ -28,7 +29,10 @@ const Navbar=()=>{
           paddingY:0.5,
           borderRadius:"20px",
         }}>
-          <Button sx={{color:"white",textTransform:"none"}}>Product</Button>
+          <Link href="/products" passHref>
+          <Button sx={{color:"white",textTransform:"none"}}>Product</Button></Link>
+          <Link href="/faq" passHref>
+          <Button sx={{color:"white",textTransform:"none"}}>FAQ</Button></Link>
           <Button sx={{color:"white",textTransform:"none"}}>Our Story</Button>
           <Button sx={{color:"white",textTransform:"none"}}>News & Event</Button>
         </Stack>

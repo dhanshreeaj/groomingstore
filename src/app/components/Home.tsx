@@ -31,13 +31,15 @@ export default function Home() {
 
     {/*Image section */}
     <Box sx={{flex:1,display:"flex",justifyContent:"center",alignItems:"center"}}>
-      <Box sx={{position:"relative",width:300,height:300,borderRadius:"50%",border:"6px solid #eee",overflow:"hidden"}}>
+      <Box sx={{display:"flex",padding:3, alignItems:"center", position:"relative",width:350,
+              height:350,borderRadius:"50%",border:"3px solid grey",overflow:"hidden"}}>
+      <Box sx={{position:"relative",width:300,height:300,borderRadius:"50%",border:"2.5px solid grey",overflow:"hidden"}}>
       <Image src="/products.png"
       alt="Product Image"
       fill
       style={{objectFit:"cover"}}
       />
-      </Box>
+      </Box></Box>
     </Box>
     </Box>
     </>

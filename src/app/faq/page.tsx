@@ -2,20 +2,18 @@
 
 import { Box, IconButton, Typography } from "@mui/material";
 import ForumIcon from "@mui/icons-material/Forum";
-import {
-    Accordion,
-    AccordionSummary,
-    AccordionDetails
-} from "@mui/material";
+import {Accordion,AccordionSummary,AccordionDetails} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export default function FAQ() {
     return (
         <>
+        {/* main containt */}
             <Box sx={{
                 display: "flex",
                 padding: 8,
                 gap: 2
             }}>
+                {/* left side title section */}
                 <Box sx={{
                     display: "flex",
                     padding: 2,
@@ -37,6 +35,7 @@ export default function FAQ() {
                         <ForumIcon fontSize="medium" />Stiil need help?Chat to us.
                     </Typography>
                 </Box>
+                {/* right side section of QA */}
                 <Box sx={{
                     display: "flex",
                     padding: 8,
