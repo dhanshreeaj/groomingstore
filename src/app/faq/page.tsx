@@ -11,7 +11,8 @@ export default function FAQ() {
             <Box sx={{
                 display: "flex",
                 padding: 8,
-                gap: 2
+                gap: 2,
+                justifyContent:"center"
             }}>
                 {/* left side title section */}
                 <Box sx={{
