@@ -17,7 +17,8 @@ export default function Review() {
                   <Container maxWidth="xl" sx={{
                 display:"flex",
                 flexDirection:"column",
-                alignItems:"center"
+                alignItems:"center",
+                gap:4
              }}>
                 <Button variant="outlined" sx={{
                     color:"black",bgcolor:"white",textTransform:"none",borderRadius:"25px",borderColor:"black"
@@ -37,7 +38,7 @@ export default function Review() {
                     display: "flex",
                     height: 650,
                     width: 1100,
-                    gap: 1.5,
+                    gap:3,
                     padding: 2,
                     marginBottom: 2,
                     flexDirection: "column"
@@ -47,7 +48,7 @@ export default function Review() {
                         display: "flex",
                         flexDirection: "row",
                         padding: 2,
-                        gap: 3,
+                        gap: 10,
                         alignItems: "center",
                         justifyContent: "center"
                     }}>
@@ -144,7 +145,7 @@ export default function Review() {
                         display: "flex",
                         flexDirection: "row",
                         padding: 2,
-                        gap: 3,
+                        gap: 10,
                         alignItems: "center",
                         justifyContent: "center"
                     }}>

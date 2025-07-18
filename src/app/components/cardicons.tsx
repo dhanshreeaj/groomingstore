@@ -9,7 +9,7 @@ export default function CardIcon(){
        
         <Box sx={{
             display:"flex",
-            padding:8,
+            padding:4,
             gap:4,
             backgroundColor:"black",
             justifyContent:"center",
@@ -24,9 +24,10 @@ export default function CardIcon(){
                 borderRadius:"5%",
                 flexDirection:{xs:"column",md:"row"},
                 height:650,
-                width:850,
+                width:900,
                 justifyContent:"center",
-                alignItems:"center"
+                alignItems:"center",
+                paddingY:4
             }}>
                 {/*text part */}
                <Box sx={{padding:4,justifyContent:"center"}}>

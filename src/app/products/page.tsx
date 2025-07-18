@@ -2,12 +2,10 @@
 
 import Image from "next/image";
 import { Box, Container, Typography } from "@mui/material";
-import { useState } from "react";
 import ProductInfo from "./productinfo";
 
 
 export default function Products() {
-  const [showText, setShowText] = useState(false);
   return (
     <>
       {/* main containt */}
@@ -50,12 +48,26 @@ export default function Products() {
                 display: "flex",
                 justifyContent: "center",
                 paddingX: 2,
-                paddingY: 5,
-                width: 250
+                paddingY: 2,
+                width: 250,
+                flexDirection:"column"
               }}>
               <Typography variant="subtitle1" color="grey" >
                 Essential Care for Every <br />Skiin Clean,effective <br />skincare
                 powered by nature.
+              </Typography>
+              <Typography variant="h6" fontSize={15}
+                sx={{
+                  color: "grey",
+                  borderRadius: "4px",
+                  fontWeight: "bold",
+                  alignItems:"center",
+                  paddingY:10,
+                  paddingX:2
+                }} ><span style={{ color: "green" }} >● Aloe Green</span> ←
+                <Typography fontSize={15} fontWeight="bold"  sx={{ color: "purple" }}>● Lavandar Caim</Typography>
+                <Typography fontSize={15} fontWeight="bold"  sx={{ color: "red" }}>● Rose barry</Typography>
+                <Typography fontSize={15} fontWeight="bold"  sx={{ color: "skyblue" }}>● Citrus Zest</Typography>
               </Typography>
             </Box>
             {/* middel or image section */}
@@ -68,8 +80,7 @@ export default function Products() {
               <Box sx={{
                 position: "relative", width: 400, height: 300, borderRadius: "50%",
                 border: "3px solid grey", overflow: "hidden"
-              }}
-                onClick={() => setShowText(!showText)}>
+              }}>
                 <Image src="/bottole.png"
                   alt="Product Image"
                   fill
@@ -77,22 +88,7 @@ export default function Products() {
                 />
               </Box>
             </Box> 
-            {/* text showing part */}
-            {showText && (
-              <Typography variant="h6" fontSize={15}
-                sx={{
-                  position: "absolute",
-                  bottom: "70%",
-                  left: "19%",
-                  color: "grey",
-                  borderRadius: "4px",
-                  fontWeight: "bold",
-                }} ><span style={{ color: "green" }} >● Aloe Green</span> ←
-                <Typography fontSize={15} sx={{ color: "purple" }}>● Lavandar Caim</Typography>
-                <Typography fontSize={15} sx={{ color: "red" }}>● Rose barry</Typography>
-                <Typography fontSize={15} sx={{ color: "skyblue" }}>● Citrus Zest</Typography>
-              </Typography>
-            )}
+            
             {/* right side containt */}
             <Box sx={{
               display: "flex",

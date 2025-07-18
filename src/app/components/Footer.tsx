@@ -30,13 +30,11 @@ export default function Footer() {
                     flexDirection: "column",
                     bgcolor: "white",
                     borderRadius: "12px",
-                    width: 1200,
                     height: 500
                 }}>
                     {/* first box part for socail media */}
                     <Box sx={{
                         display: "flex",
-                        width: 1100,
                         height: 400
                     }}>
                         <Box sx={{
