@@ -15,7 +15,6 @@ export default function Footer() {
                 padding: 8,
                 gap: 2,
                 backgroundColor: "black",
-                alignItems: "center",
                 justifyContent:"center"
             }}>
                 {/* footer containt*/}
