@@ -16,6 +16,7 @@ export default function Footer() {
                 gap: 2,
                 backgroundColor: "black",
                 alignItems: "center",
+                justifyContent:"center"
             }}>
                 {/* footer containt*/}
                 <Box sx={{

@@ -17,7 +17,8 @@ export default function Products() {
           paddingX: 6,
           paddingY: 2,
           gap: 2,
-          backgroundColor: "white"
+          backgroundColor: "white",
+          justifyContent:"center"
         }}
       >
         {/* center box contain */}
