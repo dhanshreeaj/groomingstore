@@ -22,10 +22,14 @@ const Navbar=()=>{
       <Toolbar sx={{justifyContent:"space-between"}}>
 
        {/*Left side brand name */}
-
-        <Typography variant="h6" fontWeight="bold">
+       <Link href="/"  style={{ textDecoration: "none" }}>
+        <Typography variant="h6" fontWeight="bold" color="white"
+        sx={{
+           "&:hover":{
+              color:"pink",}
+        }}>
           Kahf
-        </Typography>
+        </Typography></Link>
         {/*Center Buttons */}
         <Stack direction="row" spacing={2} sx={{
           backgroundColor:"rgba(255, 255, 255, 0.1)",
