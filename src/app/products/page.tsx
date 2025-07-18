@@ -16,7 +16,6 @@ export default function Products() {
           paddingX: 6,
           paddingY: 2,
           gap: 2,
-          backgroundColor: "white",
           justifyContent:"center"
         }}
       >

@@ -8,7 +8,7 @@ export default function Review() {
             {/*main containt */}
             <Box sx={{
                 display: "flex",
-                padding: 1,
+                padding: 2,
                 gap: 1,
                 justifyContent: "center",
                 alignItems: "center",
@@ -21,7 +21,11 @@ export default function Review() {
                 gap:4
              }}>
                 <Button variant="outlined" sx={{
-                    color:"black",bgcolor:"white",textTransform:"none",borderRadius:"25px",borderColor:"black"
+                    color:"black",bgcolor:"white",textTransform:"none",borderRadius:"25px",borderColor:"black",
+                     "&:hover":{
+                       bgcolor:"black",
+                        color:"white"
+                    }
                 }}>Testimonials</Button>
                 {/*title containt */}
                 <Box sx={{ padding: 2, justifyContent: "center" }}>

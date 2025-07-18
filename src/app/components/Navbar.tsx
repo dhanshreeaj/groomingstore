@@ -41,6 +41,8 @@ const Navbar=()=>{
           <Button sx={{color:"white",textTransform:"none"}}>Product</Button></Link>
           <Link href="/faq" passHref>
           <Button sx={{color:"white",textTransform:"none"}}>FAQ</Button></Link>
+          <Link href="/productdetails" passHref>
+          <Button sx={{color:"white",textTransform:"none"}}>Product Details</Button></Link>
           <Button sx={{color:"white",textTransform:"none"}}>Our Story</Button>
           <Button sx={{color:"white",textTransform:"none"}}>News & Event</Button>
         </Stack>

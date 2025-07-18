@@ -41,8 +41,12 @@ export default function CardIcon(){
                 {/*button part */}
                 <Box sx={{display:"flex",justifyContent:"center"}}>
                 <Button variant="outlined"
-                 sx={{color:"black", backgroundColor:"lightgrey", 
-                    textTransform:"none",justifyContent:"center",borderRadius:"20px",borderColor:"black"}}>Get Started</Button>
+                 sx={{color:"black", backgroundColor:"white", 
+                    textTransform:"none",justifyContent:"center",borderRadius:"20px",borderColor:"black",
+                     "&:hover":{
+                       bgcolor:"black",
+                        color:"white"
+                    }}}>Get Started</Button>
                 </Box>
                 </Box>
                 <Box sx={{

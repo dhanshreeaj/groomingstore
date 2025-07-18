@@ -79,7 +79,11 @@ export default function ProductFeatures(){
                         color:"black",
                         bgcolor:"white",
                         textTransform:"none",
-                        borderColor:"grey"
+                        borderColor:"black",
+                         "&:hover":{
+                       bgcolor:"grey",
+                        color:"white"
+                    }
                     }}>Get a Free quote</Button>
                 </Box>
                 </Box>

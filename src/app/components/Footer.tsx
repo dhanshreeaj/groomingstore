@@ -95,8 +95,12 @@ export default function Footer() {
                                 bgcolor: "black",
                                 color: "white",
                                 borderRadius: "10px",
-                                borderColor: "grey",
-                                width: 240
+                                borderColor: "black",
+                                width: 240,
+                                 "&:hover":{
+                       bgcolor:"grey",
+                        color:"white"
+                    }
                             }}>All systems operational </Button>
                         </Box>
                         {/* company detail */}

@@ -45,9 +45,19 @@ export default function ProductsPages(){
                 </Typography><br/>
                 <Stack direction="row" spacing={2}>
                 <Button  variant="outlined" 
-                sx={{ color:"black",bgcolor:"white",textTransform:"none", borderRadius:"10px",borderColor:"black"}}>←</Button>
+                sx={{ color:"black",bgcolor:"white",textTransform:"none", borderRadius:"10px",borderColor:"black",
+                     "&:hover":{
+                       bgcolor:"black",
+                        color:"white"
+                    }
+                }}>←</Button>
                 <Button variant="outlined"
-                 sx={{color:"black",bgcolor:"white",borderColor:"black",textTransform:"none", borderRadius:"10px"}}>→</Button></Stack>
+                 sx={{color:"black",bgcolor:"white",borderColor:"black",textTransform:"none", borderRadius:"10px",
+                     "&:hover":{
+                       bgcolor:"black",
+                        color:"white"
+                    }
+                 }}>→</Button></Stack>
             </Box>
             {/* product section */}
             <Box sx={{
@@ -252,9 +262,19 @@ export default function ProductsPages(){
                 </Typography><br/>
                 <Stack direction="row" spacing={4}>
                 <Button  variant="outlined" 
-                sx={{ color:"black",bgcolor:"white",textTransform:"none", borderRadius:"30px",borderColor:"black"}}>View Our Collections</Button>
+                sx={{ color:"black",bgcolor:"white",textTransform:"none", borderRadius:"30px",borderColor:"black",
+                     "&:hover":{
+                       bgcolor:"black",
+                        color:"white"
+                    }
+                }}>View Our Collections</Button>
                 <Button variant="outlined"
-                 sx={{color:"black",bgcolor:"white",borderColor:"black",textTransform:"none", borderRadius:"15px"}}>→</Button></Stack>
+                 sx={{color:"black",bgcolor:"white",borderColor:"black",textTransform:"none", borderRadius:"15px",
+                     "&:hover":{
+                       bgcolor:"black",
+                        color:"white"
+                    }
+                 }}>→</Button></Stack>
            </Box>
 
         </Box>

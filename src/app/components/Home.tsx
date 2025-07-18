@@ -28,7 +28,12 @@ export default function Home() {
         <Typography variant="h5">
           Effortless routines, clean formulas, no fluff.This is grooming without the vanity.
         </Typography><br/>
-        <Button sx={{color:"white", textTransform:"none", backgroundColor:"black"}}>View Collection</Button>
+        <Button sx={{color:"white", textTransform:"none", backgroundColor:"black",
+           "&:hover":{
+                       bgcolor:"grey",
+                      color:"black"
+                    }
+        }}>View Collection</Button>
       </Box>
 
     {/*Image section */}
