@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { useState } from "react";
+import ProductInfo from "./productinfo";
 
 
 export default function Products() {
@@ -21,6 +22,11 @@ export default function Products() {
           justifyContent:"center"
         }}
       >
+        <Container maxWidth="xl" sx={{
+                display:"flex",
+                flexDirection:"column",
+                alignItems:"center"
+             }}>
         {/* center box contain */}
         <Box sx={{
           display: "flex",
@@ -131,8 +137,9 @@ export default function Products() {
                 <Typography >Average Rating</Typography></Typography>
             </Box>
           </Box>
-        </Box>
+        </Box></Container>
       </Box>
+      <ProductInfo/>
     </>
   )
 }

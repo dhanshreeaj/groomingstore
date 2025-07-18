@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AppBar,Toolbar,Typography,Button,Box,IconButton,Stack } from "@mui/material";
+import { AppBar,Toolbar,Typography,Button,Box,IconButton,Stack, Container } from "@mui/material";
 import  SearchIcon  from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import Link from "next/link";
@@ -17,8 +17,12 @@ const Navbar=()=>{
       paddingX:4,
       paddingY:1,
     }}>
+               <Container maxWidth="xl">
+
       <Toolbar sx={{justifyContent:"space-between"}}>
-        {/*Left side brand name */}
+
+       {/*Left side brand name */}
+
         <Typography variant="h6" fontWeight="bold">
           Kahf
         </Typography>
@@ -52,7 +56,10 @@ const Navbar=()=>{
             paddingX:3,
           }}>Login</Button>
         </Box>
+
       </Toolbar>
+                  </Container>
+
     </AppBar>
   )
 }

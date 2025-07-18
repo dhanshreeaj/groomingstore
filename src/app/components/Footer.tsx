@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, IconButton,Link, Modal } from "@mui/material";
+import { Box, Typography, Button, IconButton,Link, Modal, Container } from "@mui/material";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -17,6 +17,11 @@ export default function Footer() {
                 backgroundColor: "black",
                 justifyContent:"center"
             }}>
+                <Container maxWidth="xl" sx={{
+                display:"flex",
+                flexDirection:"column",
+                alignItems:"center"
+             }}>
                 {/* footer containt*/}
                 <Box sx={{
                     display: "flex",
@@ -397,7 +402,7 @@ export default function Footer() {
                                         }
                                     }}>Code of Conduct</Typography></Box>
                     </Box>
-                </Box>
+                </Box></Container>
             </Box>
         </>
     )

@@ -1,18 +1,23 @@
 "use client";
 
-import { Box,Typography,Button } from "@mui/material";
+import { Box,Typography,Button, Container } from "@mui/material";
 
 export default function CardIcon(){
     return(
         <>
         {/*main part box */}
+       
         <Box sx={{
             display:"flex",
             padding:8,
             gap:4,
             backgroundColor:"black",
-            justifyContent:"center"
+            justifyContent:"center",
         }}>
+             <Container maxWidth="xl" sx={{
+                display:"flex",
+                justifyContent:"center"
+             }}>
             {/*info box part */}
             <Box sx={{
                 backgroundColor:"white",
@@ -89,7 +94,7 @@ export default function CardIcon(){
                         </Typography>
                     </Box>
                     </Box> 
-            </Box>
+            </Box></Container>
         </Box>
         </>
     )

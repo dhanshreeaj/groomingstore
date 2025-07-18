@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, IconButton } from "@mui/material";
+import { Box, Typography, Button, IconButton, Container } from "@mui/material";
 import { Avatar } from "@mui/material";
 export default function Review() {
     return (
@@ -14,6 +14,11 @@ export default function Review() {
                 alignItems: "center",
                 flexDirection: "column"
             }}>
+                  <Container maxWidth="xl" sx={{
+                display:"flex",
+                flexDirection:"column",
+                alignItems:"center"
+             }}>
                 <Button variant="outlined" sx={{
                     color:"black",bgcolor:"white",textTransform:"none",borderRadius:"25px",borderColor:"black"
                 }}>Testimonials</Button>
@@ -231,7 +236,7 @@ export default function Review() {
                             </Typography>
                         </Box>
                        </Box>
-                </Box>
+                </Box></Container>
             </Box>
         </>
     )

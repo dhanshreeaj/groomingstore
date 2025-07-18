@@ -1,11 +1,12 @@
 'use client';
 
 import Image from "next/image";
-import {Box,Typography,Button} from "@mui/material";
+import {Box,Typography,Button, Container} from "@mui/material";
 
 export default function Home() {
   return (
     <>
+    <Container maxWidth="xl">
      <Box
       sx={{
         display: "flex",
@@ -13,10 +14,11 @@ export default function Home() {
         alignItems: "center",
         justifyContent: "space-between",
         padding: 15,
-        gap: 9,
+        gap: 25,
         backgroundColor:"white"
       }}
     >
+      
       {/*Left side text contenet */}
       <Box
       sx={{flex:1}}>
@@ -41,7 +43,7 @@ export default function Home() {
       />
       </Box></Box>
     </Box>
-    </Box>
+    </Box></Container>
     </>
   );
 }

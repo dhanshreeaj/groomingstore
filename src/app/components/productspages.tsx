@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Box,Typography,Button, Stack, IconButton } from "@mui/material";
+import { Box,Typography,Button, Stack, IconButton, Container } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 export default function ProductsPages(){
     return(
@@ -16,6 +16,11 @@ export default function ProductsPages(){
             flexDirection:"column"
 
         }}>
+             <Container maxWidth="xl" sx={{
+                display:"flex",
+                flexDirection:"column",
+                alignItems:"center"
+             }}>
             {/*first box section */}
             {/*products contain */}
             <Box sx={{
@@ -253,6 +258,7 @@ export default function ProductsPages(){
            </Box>
 
         </Box>
+        </Container>
         </Box>
         
         </>

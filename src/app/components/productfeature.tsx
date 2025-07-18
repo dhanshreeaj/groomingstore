@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Box,Typography,Button } from "@mui/material";
+import { Box,Typography,Button, Container } from "@mui/material";
 
 export default function ProductFeatures(){
     return(
@@ -12,6 +12,10 @@ export default function ProductFeatures(){
             gap:4,
             justifyContent:"center"
         }}>
+             <Container maxWidth="xl" sx={{
+                display:"flex",
+                justifyContent:"center"
+             }}>
             {/*feature box containt part */}
             <Box sx={{
                 display:"flex",
@@ -102,7 +106,7 @@ export default function ProductFeatures(){
 
             </Box>
                  
-            </Box>
+            </Box></Container>
         </Box>
         </>
     )

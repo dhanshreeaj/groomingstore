@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Container, IconButton, Typography } from "@mui/material";
 import ForumIcon from "@mui/icons-material/Forum";
 import {Accordion,AccordionSummary,AccordionDetails} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -14,6 +14,10 @@ export default function FAQ() {
                 gap: 2,
                 justifyContent:"center"
             }}>
+                <Container maxWidth="xl" sx={{
+                display:"flex",
+                flexDirection:"row",
+             }}>
                 {/* left side title section */}
                 <Box sx={{
                     display: "flex",
@@ -204,7 +208,7 @@ export default function FAQ() {
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
-                </Box>
+                </Box></Container>
             </Box>
         </>
     )
