@@ -77,7 +77,7 @@ export default function Shoppage() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              bgcolor: "whitesmoke",
+              boxShadow: "0px 4px 20px rgba(0,0,0,0.3)",
               paddingX: 3,
               paddingY: 2,
               gap: 2,
@@ -204,7 +204,8 @@ export default function Shoppage() {
               <Box
                 sx={{
                   flexDirection: "column",
-                  bgcolor: "whitesmoke",
+                  bgcolor: "white",
+                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
                   paddingY: 6,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -236,7 +237,8 @@ export default function Shoppage() {
               <Box
                 sx={{
                   flexDirection: "column",
-                  bgcolor: "whitesmoke",
+                  bgcolor: "white",
+                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -268,7 +270,8 @@ export default function Shoppage() {
               <Box
                 sx={{
                   flexDirection: "column",
-                  bgcolor: "whitesmoke",
+                  bgcolor: "white",
+                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -305,13 +308,14 @@ export default function Shoppage() {
                 flexDirection: "row",
                 paddingY: 4,
                 paddingX: 2,
-                gap: 4,
+                gap: 6,
               }}
             >
               <Box
                 sx={{
                   flexDirection: "column",
-                  bgcolor: "whitesmoke",
+                  bgcolor: "white",
+                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
                   paddingY: 6,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -343,7 +347,8 @@ export default function Shoppage() {
               <Box
                 sx={{
                   flexDirection: "column",
-                  bgcolor: "whitesmoke",
+                  bgcolor: "white",
+                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -375,7 +380,8 @@ export default function Shoppage() {
               <Box
                 sx={{
                   flexDirection: "column",
-                  bgcolor: "whitesmoke",
+                  bgcolor: "white",
+                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
