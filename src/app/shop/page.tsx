@@ -48,7 +48,13 @@ export default function Shoppage() {
     <>
       <Container maxWidth="xl">
         <Box
-          sx={{ display: "flex", flexDirection: "row", paddingX: 3, gap: 4 }}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            paddingX: 3,
+            gap: 4,
+            justifyContent: "space-between",
+          }}
         >
           <Typography
             variant="subtitle1"
@@ -59,7 +65,7 @@ export default function Shoppage() {
             ALL BAGS.
             <br />
             ALL STORIES.
-          </Typography>{" "}
+          </Typography>
           <Typography variant="h6" paddingX={12} paddingY={4} fontSize={15}>
             Effortless routines, clean formulas, no fluff.This is grooming
             without the vanity.
