@@ -87,7 +87,7 @@ export default function ProductDetails() {
                 </Button>
               </Stack>
               <Typography variant="h6" fontWeight="bold" fontSize={30}>
-                SANTECO KTWO SPORTS BOTTLW
+                SANTECO KTWO SPORTS BOTTLE
               </Typography>
               <Typography variant="h6" color="grey" fontSize={15}>
                 Flip over drinking makes drinking water easy in any environment
