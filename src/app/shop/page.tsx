@@ -53,7 +53,7 @@ export default function Shoppage() {
             flexDirection: "row",
             paddingX: 3,
             gap: 4,
-            justifyContent: "space-between",
+            justifyContent: "space-evenly",
           }}
         >
           <Typography
