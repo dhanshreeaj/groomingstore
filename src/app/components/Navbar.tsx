@@ -119,6 +119,7 @@ const Navbar = () => {
               News & Event
             </Button>
           </Stack>
+          <br />
           <ThemeToggleButton />
           {/*Right side icons */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
