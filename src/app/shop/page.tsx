@@ -12,6 +12,7 @@ import {
   FormControlLabel,
   Checkbox,
   Pagination,
+  useTheme,
 } from "@mui/material";
 import { useState } from "react";
 
@@ -44,6 +45,8 @@ export default function Shoppage() {
   const outfitOptions = ["1-2", "2-4", "4-6"];
 
   const shopbyOptions = ["HP", "Apple", "Lenova"];
+
+  const theme = useTheme();
   return (
     <>
       <Container maxWidth="xl">
@@ -83,7 +86,11 @@ export default function Shoppage() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              boxShadow: "0px 4px 20px rgba(0,0,0,0.3)",
+              boxShadow:
+                theme.palette.mode === "dark"
+                  ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
+                  : theme.shadows[5],
+
               paddingX: 3,
               paddingY: 2,
               gap: 2,
@@ -211,7 +218,10 @@ export default function Shoppage() {
                 sx={{
                   flexDirection: "column",
                   bgcolor: "white",
-                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
+                  boxShadow:
+                    theme.palette.mode === "dark"
+                      ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
+                      : theme.shadows[5],
                   paddingY: 6,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -244,7 +254,10 @@ export default function Shoppage() {
                 sx={{
                   flexDirection: "column",
                   bgcolor: "white",
-                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
+                  boxShadow:
+                    theme.palette.mode === "dark"
+                      ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
+                      : theme.shadows[5],
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -277,7 +290,10 @@ export default function Shoppage() {
                 sx={{
                   flexDirection: "column",
                   bgcolor: "white",
-                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
+                  boxShadow:
+                    theme.palette.mode === "dark"
+                      ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
+                      : theme.shadows[5],
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -321,7 +337,10 @@ export default function Shoppage() {
                 sx={{
                   flexDirection: "column",
                   bgcolor: "white",
-                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
+                  boxShadow:
+                    theme.palette.mode === "dark"
+                      ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
+                      : theme.shadows[5],
                   paddingY: 6,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -354,7 +373,10 @@ export default function Shoppage() {
                 sx={{
                   flexDirection: "column",
                   bgcolor: "white",
-                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
+                  boxShadow:
+                    theme.palette.mode === "dark"
+                      ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
+                      : theme.shadows[5],
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
@@ -387,7 +409,10 @@ export default function Shoppage() {
                 sx={{
                   flexDirection: "column",
                   bgcolor: "white",
-                  boxShadow: "0px 4px 18px rgba(0,0,0,0.3)",
+                  boxShadow:
+                    theme.palette.mode === "dark"
+                      ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
+                      : theme.shadows[5],
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",

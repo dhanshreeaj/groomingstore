@@ -1,7 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { Box, Container, Typography, Button, Stack } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
+  Stack,
+  useTheme,
+} from "@mui/material";
 import React, { useState } from "react";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
@@ -19,6 +26,8 @@ export default function ProductDetails() {
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
+
+  const theme = useTheme();
   return (
     <>
       {/* main containt */}
@@ -56,14 +65,15 @@ export default function ProductDetails() {
                 <Button
                   variant="outlined"
                   sx={{
-                    color: "black",
-                    bgcolor: "white",
+                    bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+                    color: theme.palette.mode === "dark" ? "black" : "white",
                     textTransform: "none",
                     borderRadius: "30px",
                     borderColor: "black",
                     "&:hover": {
-                      bgcolor: "black",
-                      color: "white",
+                      bgcolor:
+                        theme.palette.mode === "dark" ? "black" : "white",
+                      color: theme.palette.mode === "dark" ? "white" : "black",
                     },
                   }}
                 >
@@ -72,14 +82,15 @@ export default function ProductDetails() {
                 <Button
                   variant="outlined"
                   sx={{
-                    color: "black",
-                    bgcolor: "white",
+                    bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+                    color: theme.palette.mode === "dark" ? "black" : "white",
                     borderColor: "black",
                     textTransform: "none",
                     borderRadius: "30px",
                     "&:hover": {
-                      bgcolor: "black",
-                      color: "white",
+                      bgcolor:
+                        theme.palette.mode === "dark" ? "black" : "white",
+                      color: theme.palette.mode === "dark" ? "white" : "black",
                     },
                   }}
                 >
@@ -227,25 +238,27 @@ export default function ProductDetails() {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    bgcolor: "black",
-                    color: "white",
+                    bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+                    color: theme.palette.mode === "dark" ? "black" : "white",
                     borderRadius: "500px",
                     padding: "3px 3px",
                     gap: 2,
                     width: "fit-content",
                     "&:hover": {
-                      bgcolor: "white",
-                      color: "black",
+                      bgcolor:
+                        theme.palette.mode === "dark" ? "black" : "white",
+                      color: theme.palette.mode === "dark" ? "white" : "black",
                     },
                   }}
                 >
                   <Button
                     sx={{
                       minWidth: "30px",
-                      color: "white",
+                      color: theme.palette.mode === "dark" ? "black" : "white",
                       fontSize: "18px",
                       "&:hover": {
-                        color: "black",
+                        color:
+                          theme.palette.mode === "dark" ? "white" : "black",
                       },
                     }}
                   >
@@ -257,10 +270,11 @@ export default function ProductDetails() {
                   <Button
                     sx={{
                       minWidth: "30px",
-                      color: "white",
+                      color: theme.palette.mode === "dark" ? "black" : "white",
                       fontSize: "18px",
                       "&:hover": {
-                        color: "black",
+                        color:
+                          theme.palette.mode === "dark" ? "white" : "black",
                       },
                     }}
                   >

@@ -10,12 +10,15 @@ import {
   IconButton,
   Stack,
   Container,
+  useTheme,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import Link from "next/link";
+import ThemeToggleButton from "./Themetoggel";
 
 const Navbar = () => {
+  const theme = useTheme();
   return (
     <AppBar
       position="static"
@@ -24,6 +27,8 @@ const Navbar = () => {
         boxShadow: "none",
         paddingX: 4,
         paddingY: 1,
+        bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+        color: theme.palette.mode === "dark" ? "black" : "white",
       }}
     >
       <Container maxWidth="xl">
@@ -33,8 +38,8 @@ const Navbar = () => {
             <Typography
               variant="h6"
               fontWeight="bold"
-              color="white"
               sx={{
+                color: theme.palette.mode === "dark" ? "black" : "white",
                 "&:hover": {
                   color: "pink",
                 },
@@ -48,45 +53,83 @@ const Navbar = () => {
             direction="row"
             spacing={2}
             sx={{
-              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              bgcolor:
+                theme.palette.mode === "dark"
+                  ? "rgba(0, 0, 0, 0.1)"
+                  : "rgba(255, 255, 255, 0.1)",
               paddingX: 2,
               paddingY: 0.5,
               borderRadius: "20px",
             }}
           >
             <Link href="/products" passHref>
-              <Button sx={{ color: "white", textTransform: "none" }}>
+              <Button
+                sx={{
+                  color: theme.palette.mode === "dark" ? "black" : "white",
+                  textTransform: "none",
+                }}
+              >
                 Product
               </Button>
             </Link>
             <Link href="/faq" passHref>
-              <Button sx={{ color: "white", textTransform: "none" }}>
+              <Button
+                sx={{
+                  color: theme.palette.mode === "dark" ? "black" : "white",
+                  textTransform: "none",
+                }}
+              >
                 FAQ
               </Button>
             </Link>
             <Link href="/productdetails" passHref>
-              <Button sx={{ color: "white", textTransform: "none" }}>
+              <Button
+                sx={{
+                  color: theme.palette.mode === "dark" ? "black" : "white",
+                  textTransform: "none",
+                }}
+              >
                 Product Details
               </Button>
             </Link>
             <Link href="/shop" passHref>
-              <Button sx={{ color: "white", textTransform: "none" }}>
+              <Button
+                sx={{
+                  color: theme.palette.mode === "dark" ? "black" : "white",
+                  textTransform: "none",
+                }}
+              >
                 Shop
               </Button>
             </Link>
-            <Button sx={{ color: "white", textTransform: "none" }}>
+            <Button
+              sx={{
+                color: theme.palette.mode === "dark" ? "black" : "white",
+                textTransform: "none",
+              }}
+            >
               Our Story
             </Button>
-            <Button sx={{ color: "white", textTransform: "none" }}>
+            <Button
+              sx={{
+                color: theme.palette.mode === "dark" ? "black" : "white",
+                textTransform: "none",
+              }}
+            >
               News & Event
             </Button>
           </Stack>
+          <ThemeToggleButton />
           {/*Right side icons */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-            <IconButton sx={{ color: "white" }}>
+            <IconButton
+              sx={{ color: theme.palette.mode === "dark" ? "black" : "white" }}
+            >
               <SearchIcon />
             </IconButton>
-            <IconButton sx={{ color: "white" }}>
+            <IconButton
+              sx={{ color: theme.palette.mode === "dark" ? "black" : "white" }}
+            >
               <ShoppingBagIcon />
             </IconButton>
             <Button
