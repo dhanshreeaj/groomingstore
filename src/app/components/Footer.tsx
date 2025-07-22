@@ -35,7 +35,7 @@ export default function Footer() {
           <Box
             sx={{
               display: "flex",
-              p: { xs: 2, sm: 3, md: 4 },
+              p: { xs: 2, md: 4 },
               flexDirection: "column",
               borderRadius: "12px",
               bgcolor: theme.palette.mode === "dark" ? "black" : "white",
@@ -49,6 +49,7 @@ export default function Footer() {
                 flexDirection: { xs: "column", md: "row" },
                 gap: { xs: 4, md: 6 },
                 mb: 4,
+                alignItems: { xs: "center", md: "flex-start" },
               }}
             >
               {/* social media containt */}
@@ -56,38 +57,59 @@ export default function Footer() {
                 <Typography
                   variant="subtitle1"
                   fontWeight="bold"
-                  fontSize={{ xs: 40, sm: 50, md: 60 }}
+                  fontSize={{ xs: 32, sm: 40, md: 60 }}
                 >
                   Hashnode
                 </Typography>
                 <Typography
                   variant="h6"
-                  fontSize={{ xs: 13, sm: 15 }}
+                  fontSize={{ xs: 12, sm: 14 }}
                   mt={1}
                   mb={2}
                 >
                   Hassle-free blogging platform that developers and team love.
                 </Typography>
                 <Box>
-                  {[
-                    XIcon,
-                    LinkedInIcon,
-                    FaceBookIcon,
-                    InstagramIcon,
-                    YouTubeIcon,
-                  ].map((Icon, index) => (
-                    <IconButton
-                      key={index}
-                      color="inherit"
-                      sx={{ mx: 0.5 }}
-                      component="a"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon />
-                    </IconButton>
-                  ))}
+                  <IconButton
+                    color="inherit"
+                    href="https://x.com/i/flow/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <XIcon />
+                  </IconButton>
+                  <IconButton
+                    color="inherit"
+                    href="https://www.linkedin.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedInIcon />
+                  </IconButton>
+                  <IconButton
+                    color="inherit"
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaceBookIcon />
+                  </IconButton>
+                  <IconButton
+                    color="inherit"
+                    href="https://www.instagram.com/accounts/login/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <InstagramIcon />
+                  </IconButton>
+                  <IconButton
+                    color="inherit"
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <YouTubeIcon />
+                  </IconButton>
                 </Box>
                 <Button
                   variant="outlined"
@@ -112,21 +134,19 @@ export default function Footer() {
                 sx={{
                   flex: 2,
                   display: "flex",
-                  flexDirection: { xs: "column", sm: "row" },
-                  gap: { xs: 2, sm: 4, md: 8 },
-                  justifyContent: "space-between",
-                  alignItems: "center",
+                  flexWrap: "wrap",
+                  justifyContent: { xs: "center", md: "space-between" },
                   textAlign: { xs: "center", sm: "left" },
+                  gap: { xs: 3, md: 8 },
                 }}
               >
                 {/* first section */}
                 <Box
                   sx={{
+                    flex: "1 1 120px",
+                    minWidth: 150,
                     display: "flex",
                     flexDirection: "column",
-                    width: 200,
-                    height: 350,
-                    padding: 2,
                     gap: 1,
                   }}
                 >
@@ -267,11 +287,10 @@ export default function Footer() {
                 {/* srcond section */}
                 <Box
                   sx={{
+                    flex: "1 1 120px",
+                    minWidth: 150,
                     display: "flex",
                     flexDirection: "column",
-                    width: 200,
-                    height: 350,
-                    padding: 2,
                     gap: 1,
                   }}
                 >
@@ -427,11 +446,10 @@ export default function Footer() {
                 {/* third section */}
                 <Box
                   sx={{
+                    flex: "1 1 120px",
+                    minWidth: 150,
                     display: "flex",
                     flexDirection: "column",
-                    width: 200,
-                    height: 350,
-                    padding: 2,
                     gap: 1,
                   }}
                 >
