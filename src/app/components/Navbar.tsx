@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   AppBar,
   Toolbar,
@@ -118,6 +119,19 @@ const Navbar = () => {
                 <MenuIcon />
               </IconButton>
             )}
+
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Box
+                sx={{
+                  backgroundColor:
+                    theme.palette.mode === "dark" ? "black" : "white",
+                  WebkitMask: 'url("/logo.png") no-repeat center / contain',
+                  mask: 'url("/logo.png") no-reap center / contain',
+                  width: 60,
+                  height: 60,
+                }}
+              />
+            </Link>
             <Link href="/" style={{ textDecoration: "none" }}>
               <Typography
                 variant="h6"
@@ -129,7 +143,7 @@ const Navbar = () => {
                   },
                 }}
               >
-                Kahf
+                Stallion
               </Typography>
             </Link>
           </Box>
@@ -151,15 +165,37 @@ const Navbar = () => {
             <Box
               sx={{
                 display: "flex",
-                paddingY: 8,
+                flexDirection: "column",
+                alignItems: "center",
+                paddingY: 4,
                 paddingX: 2,
                 bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                height: 2000,
+                height: "100%",
+                width: 250,
               }}
             >
+              {/* Show logo inside drawer for mobile */}
+              {isMobail && (
+                <Button
+                  variant="contained"
+                  sx={{
+                    textTransform: "none",
+                    backgroundColor: "grey",
+                    color: "white",
+                    "&:hover": {
+                      backgroundColor: "black",
+                    },
+                    borderRadius: "20px",
+                    paddingX: 1,
+                  }}
+                >
+                  Login
+                </Button>
+              )}
               <NavButtons />
             </Box>
           </Drawer>
+
           {/*Right side icons */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <ThemeToggleButton />
@@ -173,21 +209,23 @@ const Navbar = () => {
             >
               <ShoppingBagIcon />
             </IconButton>
-            <Button
-              variant="contained"
-              sx={{
-                textTransform: "none",
-                backgroundColor: "grey",
-                color: "white",
-                "&:hover": {
-                  backgroundColor: "black",
-                },
-                borderRadius: "20px",
-                paddingX: 1,
-              }}
-            >
-              Login
-            </Button>
+            {!isMobail && (
+              <Button
+                variant="contained"
+                sx={{
+                  textTransform: "none",
+                  backgroundColor: "grey",
+                  color: "white",
+                  "&:hover": {
+                    backgroundColor: "black",
+                  },
+                  borderRadius: "20px",
+                  paddingX: 1,
+                }}
+              >
+                Login
+              </Button>
+            )}
           </Box>
         </Toolbar>
       </Container>

@@ -65,7 +65,8 @@ export default function ProductsPages() {
                 Our Popular Product
               </Typography>
               <Typography variant="h6" sx={{ fontSize: { xs: 12, md: 16 } }}>
-                kahf elevates your daliy routine blending care,confidenece.
+                Stallion Grooming elevates your daliy routine blending
+                care,confidenece.
               </Typography>
               <br />
               <Stack
@@ -110,7 +111,7 @@ export default function ProductsPages() {
             </Box>
             {/* product section */}
             {[
-              { img: "/perfum.png", title: "Kahf Perfum" },
+              { img: "/perfum.png", title: "Stallion Perfum" },
               { img: "/facewash.png", title: "Face Wash" },
               { img: "/faceserium2.png", title: "Face Serum" },
             ].map((iteam, idx) => (
@@ -266,11 +267,11 @@ export default function ProductsPages() {
                 fontSize={{ xs: 18, md: 24 }}
                 fontWeight="bold"
               >
-                Kahf Body Care
+                Stallion Body Care
               </Typography>
               <Typography variant="h6" fontSize={{ xs: 10, md: 12 }} mt={1}>
-                kahf elevates your daliy routine blending care,confidenece and
-                community in every moment.
+                Stallion Grooming elevates your daliy routine blending
+                care,confidenece and community in every moment.
               </Typography>
               <br />
               <Stack

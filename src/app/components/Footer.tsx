@@ -57,9 +57,9 @@ export default function Footer() {
                 <Typography
                   variant="subtitle1"
                   fontWeight="bold"
-                  fontSize={{ xs: 32, sm: 40, md: 60 }}
+                  fontSize={{ xs: 22, sm: 30, md: 45 }}
                 >
-                  Hashnode
+                  Stallion Grooming
                 </Typography>
                 <Typography
                   variant="h6"
@@ -67,7 +67,7 @@ export default function Footer() {
                   mt={1}
                   mb={2}
                 >
-                  Hassle-free blogging platform that developers and team love.
+                  Stallion-free blogging platform that developers and team love.
                 </Typography>
                 <Box>
                   <IconButton
@@ -267,7 +267,7 @@ export default function Footer() {
                     }}
                   >
                     {" "}
-                    Hashnode AI
+                    Stallion AI
                   </Typography>
                   <Typography
                     variant="caption"
@@ -314,7 +314,7 @@ export default function Footer() {
                     }}
                   >
                     {" "}
-                    About Hashnode
+                    About Stallion
                   </Typography>
                   <Typography
                     variant="caption"
@@ -439,8 +439,7 @@ export default function Footer() {
                       },
                     }}
                   >
-                    {" "}
-                    Hashnode Townhall
+                    Stallion Townhall
                   </Typography>
                 </Box>
                 {/* third section */}
@@ -543,7 +542,7 @@ export default function Footer() {
               }}
             >
               <Typography variant="subtitle2" color="grey">
-                © 2025 Hashnode-LinearBytes Inc.
+                © 2025 Stallion-LinearBytes Inc.
               </Typography>
               <Box display="flex" gap={2}>
                 {["Privacy Policy", "Terms", "Code of Conduct"].map(
