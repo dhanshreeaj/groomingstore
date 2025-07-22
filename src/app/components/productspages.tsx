@@ -19,10 +19,8 @@ export default function ProductsPages() {
       <Box
         sx={{
           display: "flex",
-          padding: 8,
+          padding: { xs: 2, sm: 4, md: 8 },
           gap: 2,
-          backgroundColor: "black",
-          height: 950,
           alignItems: "center",
           flexDirection: "column",
           bgcolor: theme.palette.mode === "dark" ? "white" : "black",
@@ -42,10 +40,11 @@ export default function ProductsPages() {
           <Box
             sx={{
               display: "flex",
-              height: 400,
-              width: 1100,
-              gap: 1.5,
-              paddingY: 9,
+              height: "auto",
+              flexDirection: { xs: "column", md: "row" },
+              width: { xs: "100%", sm: "80%", md: 1100 },
+              gap: { xs: 0.8, md: 1.5 },
+              paddingY: { xs: 2, md: 4 },
               marginBottom: 2,
               bgcolor: theme.palette.mode === "dark" ? "black" : "white",
               color: theme.palette.mode === "dark" ? "white" : "black",
@@ -54,19 +53,27 @@ export default function ProductsPages() {
             {/*left section */}
             <Box
               sx={{
-                width: 300,
-                paddingX: 4,
-                paddingY: 8,
+                width: { xs: "100%", md: 300 },
+                padding: { xs: 2, md: 4 },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
-              <Typography variant="h6" fontSize={24} fontWeight="bold">
+              <Typography
+                variant="h6"
+                sx={{ fontSize: { xs: 18, md: 24 }, fontWeight: "bold" }}
+              >
                 Our Popular Product
               </Typography>
-              <Typography variant="h6" fontSize={12}>
+              <Typography variant="h6" sx={{ fontSize: { xs: 12, md: 16 } }}>
                 kahf elevates your daliy routine blending care,confidenece.
               </Typography>
               <br />
-              <Stack direction="row" spacing={2}>
+              <Stack
+                direction="row"
+                spacing={2}
+                justifyContent={{ xs: "center", md: "flex-start" }}
+                mt={2}
+              >
                 <Button
                   variant="outlined"
                   sx={{
@@ -102,180 +109,70 @@ export default function ProductsPages() {
               </Stack>
             </Box>
             {/* product section */}
-            <Box
-              sx={{
-                backgroundColor: "lightgrey",
-                width: 250,
-                height: 250,
-                borderRadius: "20px",
-                justifyContent: "space-between",
-                flexDirection: "column",
-                p: 2,
-              }}
-            >
+            {[
+              { img: "/perfum.png", title: "Kahf Perfum" },
+              { img: "/facewash.png", title: "Face Wash" },
+              { img: "/faceserium2.png", title: "Face Serum" },
+            ].map((iteam, idx) => (
               <Box
+                key={idx}
                 sx={{
                   display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <Image
-                  src="/perfum.png"
-                  alt="Product image"
-                  width={150}
-                  height={150}
-                  style={{ objectFit: "cover" }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
+                  backgroundColor: "lightgrey",
+                  width: { xs: "80%", sm: 200, md: 250 },
+                  height: { xs: 200, md: 250 },
+                  borderRadius: "20px",
                   justifyContent: "space-between",
+                  flexDirection: "column",
+                  p: 2,
+                  mx: "auto",
                 }}
               >
-                <Typography
-                  variant="subtitle1"
-                  color="black"
-                  paddingY={6}
-                  paddingX={1}
-                  fontWeight="bold"
-                  fontSize={15}
-                >
-                  {" "}
-                  Kahf Parfum
-                </Typography>
-                <IconButton
+                <Box
                   sx={{
-                    borderRadius: "50%",
-                    width: 10,
-                    height: 10,
                     display: "flex",
-                    alignItems: "center",
                     justifyContent: "center",
-                    border: "1px solid #333",
                   }}
                 >
-                  <AddIcon />
-                </IconButton>
-              </Box>
-            </Box>
-            {/*other product section */}
-            <Box
-              sx={{
-                backgroundColor: "lightgrey",
-                width: 250,
-                height: 250,
-                borderRadius: "20px",
-                justifyContent: "space-between",
-                flexDirection: "column",
-                p: 2,
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <Image
-                  src="/facewash.png"
-                  alt="Product image"
-                  width={150}
-                  height={150}
-                  style={{ objectFit: "cover" }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Typography
-                  variant="subtitle1"
-                  color="black"
-                  paddingY={6}
-                  paddingX={1}
-                  fontWeight="bold"
-                  fontSize={15}
-                >
-                  Face Wash
-                </Typography>
-                <IconButton
+                  <Image
+                    src={iteam.img}
+                    alt="Product image"
+                    width={150}
+                    height={150}
+                    style={{ objectFit: "cover" }}
+                  />
+                </Box>
+                <Box
                   sx={{
-                    borderRadius: "50%",
-                    width: 10,
-                    height: 10,
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    border: "1px solid #333",
+                    justifyContent: "space-between",
                   }}
                 >
-                  <AddIcon />
-                </IconButton>
+                  <Typography
+                    variant="subtitle1"
+                    color="black"
+                    fontWeight="bold"
+                    fontSize={{ xs: 12, md: 15 }}
+                  >
+                    {iteam.title}
+                  </Typography>
+                  <IconButton
+                    sx={{
+                      borderRadius: "50%",
+                      width: 10,
+                      height: 10,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "1px solid #333",
+                    }}
+                  >
+                    <AddIcon />
+                  </IconButton>
+                </Box>
               </Box>
-            </Box>
-            {/*other product */}
-            <Box
-              sx={{
-                backgroundColor: "lightgrey",
-                width: 250,
-                height: 250,
-                borderRadius: "20px",
-                justifyContent: "space-between",
-                flexDirection: "column",
-                p: 2,
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <Image
-                  src="/faceserium2.png"
-                  alt="Product image"
-                  width={150}
-                  height={150}
-                  style={{ objectFit: "cover" }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Typography
-                  variant="subtitle1"
-                  color="black"
-                  paddingY={6}
-                  paddingX={1}
-                  fontWeight="bold"
-                  fontSize={15}
-                >
-                  Face Serum
-                </Typography>
-                <IconButton
-                  sx={{
-                    borderRadius: "50%",
-                    width: 10,
-                    height: 10,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    border: "1px solid #333",
-                  }}
-                >
-                  <AddIcon />
-                </IconButton>
-              </Box>
-            </Box>
+            ))}
           </Box>
 
           {/*second box section */}
@@ -284,9 +181,10 @@ export default function ProductsPages() {
             sx={{
               display: "flex",
               backgroundColor: "white",
-              height: 400,
-              width: 1100,
-              gap: 1.5,
+              flexDirection: { xs: "column", md: "row" },
+              width: { xs: "100%", sm: "90%", md: 1100 },
+              gap: { xs: 2, md: 1.5 },
+              p: { xs: 2, md: 3 },
               bgcolor: theme.palette.mode === "dark" ? "black" : "white",
               color: theme.palette.mode === "dark" ? "black" : "white",
             }}
@@ -294,16 +192,15 @@ export default function ProductsPages() {
             {/*product image by category */}
             <Box
               sx={{
-                width: 366,
-                height: 400,
-                paddingX: 8,
+                flex: 1,
+                textAlign: "center",
                 color: theme.palette.mode === "dark" ? "white" : "black",
               }}
             >
               <Typography
                 variant="subtitle1"
-                fontSize={14}
-                paddingY={4}
+                fontSize={{ xs: 12, md: 14 }}
+                paddingY={2}
                 align="center"
               >
                 PRODUCT BY CATEGORY
@@ -313,8 +210,9 @@ export default function ProductsPages() {
                 sx={{
                   display: "flex",
                   backgroundColor: "lightgray",
-                  width: 250,
-                  height: 250,
+                  width: { xs: 200, sm: 250 },
+                  height: { xs: 200, sm: 250 },
+                  mx: "auto",
                   borderRadius: "20px",
                   justifyContent: "center",
                 }}
@@ -332,77 +230,54 @@ export default function ProductsPages() {
             {/*product category name */}
             <Box
               sx={{
-                width: 366,
-                height: 400,
-                paddingX: 8,
-                paddingY: 10,
+                flex: 1,
+                textAlign: { xs: "center", md: "left" },
               }}
             >
-              <Typography
-                variant="h3"
-                color="grey"
-                fontSize={45}
-                sx={{
-                  cursor: "pointer",
-                  transition: "color 0.3s ease",
-                  "&:hover": {
-                    color: theme.palette.mode === "dark" ? "white" : "black",
-                  },
-                }}
-              >
-                Face Care
-              </Typography>{" "}
-              <br />
-              <Typography
-                variant="h3"
-                color="grey"
-                fontSize={45}
-                sx={{
-                  cursor: "pointer",
-                  transition: "color 0.3s ease",
-                  "&:hover": {
-                    color: theme.palette.mode === "dark" ? "white" : "black",
-                  },
-                }}
-              >
-                Body Care
-              </Typography>{" "}
-              <br />
-              <Typography
-                variant="h3"
-                color="grey"
-                fontSize={45}
-                sx={{
-                  cursor: "pointer",
-                  transition: "color 0.3s ease",
-                  "&:hover": {
-                    color: theme.palette.mode === "dark" ? "white" : "black",
-                  },
-                }}
-              >
-                Hair Care
-              </Typography>
+              {["Face Care", "Body Care", "Hair care"].map((cat) => (
+                <Typography
+                  key={cat}
+                  variant="h3"
+                  color="grey"
+                  fontSize={{ xs: 35, md: 50 }}
+                  sx={{
+                    cursor: "pointer",
+                    "&:hover": {
+                      color: theme.palette.mode === "dark" ? "white" : "black",
+                    },
+                    mt: { xs: 1, md: 2 },
+                  }}
+                >
+                  {cat}
+                </Typography>
+              ))}
             </Box>
 
             {/*product details */}
             <Box
               sx={{
-                width: 366,
-                height: 400,
-                paddingX: 3,
-                paddingY: 10,
+                flex: 1,
+                textAlign: { xs: "center", md: "left" },
                 color: theme.palette.mode === "dark" ? "white" : "black",
               }}
             >
-              <Typography variant="h6" fontSize={24} fontWeight="bold">
+              <Typography
+                variant="h6"
+                fontSize={{ xs: 18, md: 24 }}
+                fontWeight="bold"
+              >
                 Kahf Body Care
               </Typography>
-              <Typography variant="h6" fontSize={12}>
+              <Typography variant="h6" fontSize={{ xs: 10, md: 12 }} mt={1}>
                 kahf elevates your daliy routine blending care,confidenece and
                 community in every moment.
               </Typography>
               <br />
-              <Stack direction="row" spacing={4}>
+              <Stack
+                direction="row"
+                spacing={4}
+                justifyContent={{ xs: "center", md: "flex-start" }}
+              >
                 <Button
                   variant="outlined"
                   sx={{

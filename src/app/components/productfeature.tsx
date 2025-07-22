@@ -10,8 +10,7 @@ export default function ProductFeatures() {
       <Box
         sx={{
           display: "flex",
-          padding: 8,
-          gap: 4,
+          padding: { xs: 2, sm: 4, md: 8 },
           justifyContent: "center",
           bgcolor: theme.palette.mode === "dark" ? "black" : "white",
         }}
@@ -30,18 +29,20 @@ export default function ProductFeatures() {
               backgroundColor: "black",
               borderRadius: "15px",
               flexDirection: { xs: "column", md: "row" },
-              height: 700,
-              width: 900,
-              justifyContent: "center",
+              justifyContent: "space-between",
+              alignItems: "center",
               bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+              width: { xs: "100%", sm: 500, md: 900 },
+              height: "auto",
+              padding: { xs: 0.5, sm: 3, md: 6 },
             }}
           >
             {/*left side containt */}
             <Box
               sx={{
-                paddingX: 6,
-                paddingY: 30,
+                padding: { xs: 0.5, sm: 1.5, md: 4 },
                 backgroundColor: "black",
+                textAlign: "center",
                 borderRadius: "15px",
                 justifyContent: "center",
                 bgcolor: theme.palette.mode === "dark" ? "white" : "black",
@@ -51,13 +52,20 @@ export default function ProductFeatures() {
               <Typography
                 variant="h6"
                 align="center"
-                fontSize={15}
                 fontWeight="bold"
+                sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" } }}
               >
                 Expert Technicians
               </Typography>
               <br />
-              <Typography variant="h6" align="center" fontSize={12}>
+              <Typography
+                variant="h6"
+                align="center"
+                sx={{
+                  fontSize: { xs: "0.6rem", sm: "0.8rem", md: "0.9rem" },
+                  mt: 1,
+                }}
+              >
                 Our certificated experts provide top-quality service. Trust us
                 for accurante diagonstics and repairs.
               </Typography>
@@ -66,13 +74,20 @@ export default function ProductFeatures() {
               <Typography
                 variant="h6"
                 align="center"
-                fontSize={15}
                 fontWeight="bold"
+                sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" } }}
               >
                 Fast Turnaround
               </Typography>
               <br />
-              <Typography variant="h6" align="center" fontSize={12}>
+              <Typography
+                variant="h6"
+                align="center"
+                sx={{
+                  fontSize: { xs: "0.6rem", sm: "0.8rem", md: "0.9rem" },
+                  mt: 1,
+                }}
+              >
                 Get back on the road quickly with our effcient service.Most
                 repairs are completed within the same day.
               </Typography>
@@ -80,8 +95,11 @@ export default function ProductFeatures() {
             {/*center containt */}
             <Box
               sx={{
-                padding: 8,
-                justifyContent: "center",
+                display: "flex",
+                textAlign: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                padding: { xs: 2, sm: 3, md: 4 },
                 bgcolor: theme.palette.mode === "dark" ? "white" : "black",
                 color: theme.palette.mode === "dark" ? "black" : "white",
               }}
@@ -89,30 +107,35 @@ export default function ProductFeatures() {
               <Typography
                 variant="h4"
                 align="center"
-                fontSize={30}
                 fontWeight="bold"
+                sx={{ fontSize: { xs: "1.1rem", sm: "1.5rem", md: "2rem" } }}
               >
                 Why choose us?
               </Typography>
               <br />
-              <Typography variant="h6" align="center" fontSize={12}>
-                From route maintance to major repairs,
-                <br />
-                We got your car coverd with reliable and friendly service.
+              <Typography
+                variant="h6"
+                align="center"
+                sx={{
+                  fontSize: { xs: "0.6rem", sm: "0.8rem", md: "0.9rem" },
+                  mt: 1,
+                }}
+              >
+                From route maintance to major repairs, We got your car coverd
+                with reliable and friendly service.
               </Typography>
-              <br />
-              <br />
               <Box
                 sx={{
-                  justifyContent: "center",
-                  display: "flex",
+                  position: "relative",
+                  mt: 3,
+                  width: { xs: 120, sm: 180, md: 300 },
+                  height: { xs: 120, sm: 180, md: 300 },
                 }}
               >
                 <Image
                   src="/productfeature.png"
                   alt="Product Feature Image"
-                  width={300}
-                  height={300}
+                  fill
                   style={{ objectFit: "cover" }}
                 />
               </Box>
@@ -126,6 +149,7 @@ export default function ProductFeatures() {
                 <Button
                   variant="outlined"
                   sx={{
+                    fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" },
                     textTransform: "none",
                     borderColor: "black",
                     bgcolor: theme.palette.mode === "dark" ? "black" : "white",
@@ -143,8 +167,8 @@ export default function ProductFeatures() {
             {/*right side containt */}
             <Box
               sx={{
-                paddingX: 6,
-                paddingY: 30,
+                padding: { xs: 1.5, sm: 3, md: 4 },
+                textAlign: "center",
                 backgroundColor: "black",
                 borderRadius: "15px",
                 justifyContent: "center",
@@ -155,13 +179,20 @@ export default function ProductFeatures() {
               <Typography
                 variant="h6"
                 align="center"
-                fontSize={15}
                 fontWeight="bold"
+                sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" } }}
               >
                 Affordable Pricing
               </Typography>
               <br />
-              <Typography variant="h6" align="center" fontSize={12}>
+              <Typography
+                variant="h6"
+                align="center"
+                sx={{
+                  fontSize: { xs: "0.6rem", sm: "0.8rem", md: "0.9rem" },
+                  mt: 1,
+                }}
+              >
                 High-quality repairs at prices you can afford.No hidden
                 fees,just honest and transparent pricing.
               </Typography>
@@ -170,13 +201,20 @@ export default function ProductFeatures() {
               <Typography
                 variant="h6"
                 align="center"
-                fontSize={15}
                 fontWeight="bold"
+                sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" } }}
               >
                 All-Inclusive Services
               </Typography>
               <br />
-              <Typography variant="h6" align="center" fontSize={12}>
+              <Typography
+                variant="h6"
+                align="center"
+                sx={{
+                  fontSize: { xs: "0.6rem", sm: "0.8rem", md: "0.9rem" },
+                  mt: 1,
+                }}
+              >
                 From routine maintenace to complex repairs,we handle it all.You
                 one-stop shop for all your car care needs.
               </Typography>

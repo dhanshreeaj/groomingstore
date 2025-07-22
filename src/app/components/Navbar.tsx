@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -11,21 +11,99 @@ import {
   Stack,
   Container,
   useTheme,
+  useMediaQuery,
+  Drawer,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import Link from "next/link";
 import ThemeToggleButton from "./Themetoggel";
 
+import MenuIcon from "@mui/icons-material/Menu";
 const Navbar = () => {
   const theme = useTheme();
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const isMobail = useMediaQuery(theme.breakpoints.down("md"));
+  const toggleDrawer = (open: boolean) => () => {
+    setDrawerOpen(open);
+  };
+  // center or menu buttons
+  const NavButtons = () => (
+    <Stack
+      direction={isMobail ? "column" : "row"}
+      spacing={2}
+      sx={{
+        bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+        paddingX: 1,
+        paddingY: 0.5,
+        borderRadius: "20px",
+        alignItems: "center",
+      }}
+    >
+      <Link href="/products" passHref>
+        <Button
+          sx={{
+            color: theme.palette.mode === "dark" ? "black" : "white",
+            textTransform: "none",
+          }}
+        >
+          Product
+        </Button>
+      </Link>
+      <Link href="/faq" passHref>
+        <Button
+          sx={{
+            color: theme.palette.mode === "dark" ? "black" : "white",
+            textTransform: "none",
+          }}
+        >
+          FAQ
+        </Button>
+      </Link>
+      <Link href="/productdetails" passHref>
+        <Button
+          sx={{
+            color: theme.palette.mode === "dark" ? "black" : "white",
+            textTransform: "none",
+          }}
+        >
+          Product Details
+        </Button>
+      </Link>
+      <Link href="/shop" passHref>
+        <Button
+          sx={{
+            color: theme.palette.mode === "dark" ? "black" : "white",
+            textTransform: "none",
+          }}
+        >
+          Shop
+        </Button>
+      </Link>
+      <Button
+        sx={{
+          color: theme.palette.mode === "dark" ? "black" : "white",
+          textTransform: "none",
+        }}
+      >
+        Our Story
+      </Button>
+      <Button
+        sx={{
+          color: theme.palette.mode === "dark" ? "black" : "white",
+          textTransform: "none",
+        }}
+      >
+        News & Event
+      </Button>
+    </Stack>
+  );
   return (
     <AppBar
       position="static"
       sx={{
         backgroundColor: "black",
         boxShadow: "none",
-        paddingX: 4,
         paddingY: 1,
         bgcolor: theme.palette.mode === "dark" ? "white" : "black",
         color: theme.palette.mode === "dark" ? "black" : "white",
@@ -34,95 +112,57 @@ const Navbar = () => {
       <Container maxWidth="xl">
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/*Left side brand name */}
-          <Link href="/" style={{ textDecoration: "none" }}>
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              sx={{
-                color: theme.palette.mode === "dark" ? "black" : "white",
-                "&:hover": {
-                  color: "pink",
-                },
-              }}
-            >
-              Kahf
-            </Typography>
-          </Link>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            {isMobail && (
+              <IconButton color="inherit" onClick={toggleDrawer(true)}>
+                <MenuIcon />
+              </IconButton>
+            )}
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                sx={{
+                  color: theme.palette.mode === "dark" ? "black" : "white",
+                  "&:hover": {
+                    color: "pink",
+                  },
+                }}
+              >
+                Kahf
+              </Typography>
+            </Link>
+          </Box>
+
           {/*Center Buttons */}
-          <Stack
-            direction="row"
-            spacing={2}
-            sx={{
-              bgcolor:
-                theme.palette.mode === "dark"
-                  ? "rgba(0, 0, 0, 0.1)"
-                  : "rgba(255, 255, 255, 0.1)",
-              paddingX: 2,
-              paddingY: 0.5,
-              borderRadius: "20px",
-            }}
-          >
-            <Link href="/products" passHref>
-              <Button
-                sx={{
-                  color: theme.palette.mode === "dark" ? "black" : "white",
-                  textTransform: "none",
-                }}
-              >
-                Product
-              </Button>
-            </Link>
-            <Link href="/faq" passHref>
-              <Button
-                sx={{
-                  color: theme.palette.mode === "dark" ? "black" : "white",
-                  textTransform: "none",
-                }}
-              >
-                FAQ
-              </Button>
-            </Link>
-            <Link href="/productdetails" passHref>
-              <Button
-                sx={{
-                  color: theme.palette.mode === "dark" ? "black" : "white",
-                  textTransform: "none",
-                }}
-              >
-                Product Details
-              </Button>
-            </Link>
-            <Link href="/shop" passHref>
-              <Button
-                sx={{
-                  color: theme.palette.mode === "dark" ? "black" : "white",
-                  textTransform: "none",
-                }}
-              >
-                Shop
-              </Button>
-            </Link>
-            <Button
+          {!isMobail && (
+            <Box
               sx={{
-                color: theme.palette.mode === "dark" ? "black" : "white",
-                textTransform: "none",
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
               }}
             >
-              Our Story
-            </Button>
-            <Button
+              <NavButtons />
+            </Box>
+          )}
+
+          <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+            <Box
               sx={{
-                color: theme.palette.mode === "dark" ? "black" : "white",
-                textTransform: "none",
+                display: "flex",
+                paddingY: 8,
+                paddingX: 2,
+                bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+                height: 2000,
               }}
             >
-              News & Event
-            </Button>
-          </Stack>
-          <br />
-          <ThemeToggleButton />
+              <NavButtons />
+            </Box>
+          </Drawer>
           {/*Right side icons */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <ThemeToggleButton />
             <IconButton
               sx={{ color: theme.palette.mode === "dark" ? "black" : "white" }}
             >
@@ -143,7 +183,7 @@ const Navbar = () => {
                   backgroundColor: "black",
                 },
                 borderRadius: "20px",
-                paddingX: 3,
+                paddingX: 1,
               }}
             >
               Login

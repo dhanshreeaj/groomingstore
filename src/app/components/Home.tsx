@@ -14,8 +14,8 @@ export default function Home() {
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
-            padding: 15,
-            gap: 25,
+            padding: { xs: 2, md: 15 },
+            gap: { xs: 4, md: 25 },
             backgroundColor: "white",
             bgcolor: theme.palette.mode === "dark" ? "black" : "white",
           }}
@@ -26,19 +26,28 @@ export default function Home() {
               flex: 1,
               bgcolor: theme.palette.mode === "dark" ? "black" : "white",
               color: theme.palette.mode === "dark" ? "white" : "black",
+              textAlign: { xs: "center", md: "left" },
             }}
           >
-            <Typography variant="h2" fontWeight="bold">
+            <Typography
+              variant="h2"
+              fontWeight="bold"
+              sx={{ fontSize: { xs: "1.8rem", md: "3.9rem" } }}
+            >
               Clean Looks No Compromise
             </Typography>
             <br />
-            <Typography variant="h5">
+            <Typography
+              variant="h5"
+              sx={{ fontSize: { xs: "1rem", md: "1.4rem" } }}
+            >
               Effortless routines, clean formulas, no fluff.This is grooming
               without the vanity.
             </Typography>
             <br />
             <Button
               sx={{
+                fontSize: { xs: "0.4rem", md: "1rem" },
                 textTransform: "none",
                 bgcolor: theme.palette.mode === "dark" ? "white" : "black",
                 color: theme.palette.mode === "dark" ? "black" : "white",
@@ -67,8 +76,8 @@ export default function Home() {
                 padding: 3,
                 alignItems: "center",
                 position: "relative",
-                width: 350,
-                height: 350,
+                width: { xs: 200, md: 350 },
+                height: { xs: 200, md: 350 },
                 borderRadius: "50%",
                 border: "3px solid grey",
                 overflow: "hidden",
@@ -77,8 +86,8 @@ export default function Home() {
               <Box
                 sx={{
                   position: "relative",
-                  width: 300,
-                  height: 300,
+                  width: { xs: 150, md: 300 },
+                  height: { xs: 150, md: 300 },
                   borderRadius: "50%",
                   border: "2.5px solid grey",
                   overflow: "hidden",
