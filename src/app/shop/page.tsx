@@ -53,8 +53,10 @@ export default function Shoppage() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
-            paddingX: 3,
+            flexDirection: { xs: "column", md: "row" },
+            alignItems: "center",
+            textAlign: { xs: "center", md: "left" },
+            paddingX: { xs: 2, md: 3 },
             gap: 4,
             justifyContent: "space-evenly",
           }}
@@ -62,14 +64,19 @@ export default function Shoppage() {
           <Typography
             variant="subtitle1"
             fontWeight="bold"
-            fontSize={35}
-            padding={4}
+            fontSize={{ xs: 24, md: 35 }}
+            padding={2}
           >
             ALL BAGS.
             <br />
             ALL STORIES.
           </Typography>
-          <Typography variant="h6" paddingX={12} paddingY={4} fontSize={15}>
+          <Typography
+            variant="h6"
+            paddingX={{ xs: 0, md: 12 }}
+            paddingY={2}
+            fontSize={{ xs: 14, md: 15 }}
+          >
             Effortless routines, clean formulas, no fluff.This is grooming
             without the vanity.
           </Typography>
@@ -78,7 +85,9 @@ export default function Shoppage() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column", md: "row" },
+            gap: { xs: 3, md: 4 },
+            paddingY: { xs: 2, md: 4 },
           }}
         >
           {/* Category part */}
@@ -90,13 +99,13 @@ export default function Shoppage() {
                 theme.palette.mode === "dark"
                   ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
                   : theme.shadows[5],
-
-              paddingX: 3,
+              paddingX: { xs: 2, md: 3 },
               paddingY: 2,
               gap: 2,
+              width: { xs: "80%", md: "300px" },
             }}
           >
-            <Typography variant="h6" fontWeight="bold" fontSize={30}>
+            <Typography variant="h6" fontWeight="bold" fontSize={25}>
               CATEGORY
             </Typography>
             <br />
@@ -167,11 +176,9 @@ export default function Shoppage() {
           {/* products part */}
           <Box
             sx={{
+              flex: 1,
               display: "flex",
               flexDirection: "column",
-              paddingX: 3,
-              paddingY: 2,
-              gap: 2,
             }}
           >
             {/* Sort by section */}
@@ -179,7 +186,7 @@ export default function Shoppage() {
               sx={{
                 display: "flex",
                 padding: 2,
-                flexDirection: "row-reverse",
+                justifyContent: "flex-end",
               }}
             >
               <Accordion sx={{ width: 250 }}>
@@ -207,31 +214,37 @@ export default function Shoppage() {
             {/*  product image and details section1 */}
             <Box
               sx={{
-                display: "flex",
-                flexDirection: "row",
-                paddingY: 4,
-                paddingX: 2,
-                gap: 6,
+                display: "grid",
+                gridTemplateColumns: {
+                  xs: "1fr",
+                  sm: "repeat(2, 1fr)",
+                  md: "repeat(3, 1fr)",
+                },
+                gap: { xs: 2, md: 4 },
+                paddingX: { xs: 1, md: 2 },
+                paddingY: 2,
               }}
             >
               <Box
                 sx={{
+                  display: "flex",
                   flexDirection: "column",
                   bgcolor: "white",
                   boxShadow:
                     theme.palette.mode === "dark"
                       ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
                       : theme.shadows[5],
-                  paddingY: 6,
+                  paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
+                  alignItems: "center",
                 }}
               >
                 <Image
                   src="/bag.png"
                   alt="Bag Image"
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   style={{ objectFit: "cover" }}
                 />
                 <Typography
@@ -252,6 +265,7 @@ export default function Shoppage() {
               </Box>
               <Box
                 sx={{
+                  display: "flex",
                   flexDirection: "column",
                   bgcolor: "white",
                   boxShadow:
@@ -261,13 +275,14 @@ export default function Shoppage() {
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
+                  alignItems: "center",
                 }}
               >
                 <Image
                   src="/bag1.png"
                   alt="Bag Image"
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   style={{ objectFit: "cover" }}
                 />
                 <Typography
@@ -288,6 +303,7 @@ export default function Shoppage() {
               </Box>
               <Box
                 sx={{
+                  display: "flex",
                   flexDirection: "column",
                   bgcolor: "white",
                   boxShadow:
@@ -297,13 +313,14 @@ export default function Shoppage() {
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
+                  alignItems: "center",
                 }}
               >
                 <Image
                   src="/bag2.png"
                   alt="Bag Image"
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   style={{ objectFit: "cover" }}
                 />
                 <Typography
@@ -326,31 +343,37 @@ export default function Shoppage() {
             {/*  product image and details section2 */}
             <Box
               sx={{
-                display: "flex",
-                flexDirection: "row",
-                paddingY: 4,
-                paddingX: 2,
-                gap: 6,
+                display: "grid",
+                gridTemplateColumns: {
+                  xs: "1fr",
+                  sm: "repeat(2, 1fr)",
+                  md: "repeat(3, 1fr)",
+                },
+                gap: { xs: 2, md: 4 },
+                paddingX: { xs: 1, md: 2 },
+                paddingY: 2,
               }}
             >
               <Box
                 sx={{
+                  display: "flex",
                   flexDirection: "column",
                   bgcolor: "white",
                   boxShadow:
                     theme.palette.mode === "dark"
                       ? "0px 4px 10px rgba(255, 255, 255, 0.3)"
                       : theme.shadows[5],
-                  paddingY: 6,
+                  paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
+                  alignItems: "center",
                 }}
               >
                 <Image
                   src="/bag2.png"
                   alt="Bag Image"
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   style={{ objectFit: "cover" }}
                 />
                 <Typography
@@ -371,6 +394,7 @@ export default function Shoppage() {
               </Box>
               <Box
                 sx={{
+                  display: "flex",
                   flexDirection: "column",
                   bgcolor: "white",
                   boxShadow:
@@ -380,13 +404,14 @@ export default function Shoppage() {
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
+                  alignItems: "center",
                 }}
               >
                 <Image
                   src="/bag2.png"
                   alt="Bag Image"
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   style={{ objectFit: "cover" }}
                 />
                 <Typography
@@ -407,6 +432,7 @@ export default function Shoppage() {
               </Box>
               <Box
                 sx={{
+                  display: "flex",
                   flexDirection: "column",
                   bgcolor: "white",
                   boxShadow:
@@ -416,13 +442,14 @@ export default function Shoppage() {
                   paddingY: 4,
                   paddingX: 2,
                   borderRadius: "20px",
+                  alignItems: "center",
                 }}
               >
                 <Image
                   src="/bag.png"
                   alt="Bag Image"
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   style={{ objectFit: "cover" }}
                 />
                 <Typography

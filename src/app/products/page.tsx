@@ -13,9 +13,9 @@ export default function Products() {
         sx={{
           display: "flex",
           alignItems: "center",
-          paddingX: 6,
-          paddingY: 2,
-          gap: 2,
+          paddingX: { xs: 2, md: 6 },
+          paddingY: { xs: 2, md: 4 },
+          gap: { xs: 2, md: 4 },
           justifyContent: "center",
         }}
       >
@@ -34,17 +34,18 @@ export default function Products() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              paddingX: 16,
-              gap: 5,
+              paddingX: { xs: 2, md: 16 },
+              gap: { xs: 3, md: 5 },
             }}
           >
             <Box
               sx={{
                 flex: 1,
                 display: "flex",
-                flexDirection: "row",
-                paddingX: 1,
-                gap: 4,
+                flexDirection: { xs: "column", md: "row" },
+                paddingX: { xs: 0, md: 1 },
+                gap: { xs: 3, md: 4 },
+                alignItems: "center",
               }}
             >
               {/*Left side text contenet */}
@@ -52,65 +53,50 @@ export default function Products() {
                 sx={{
                   display: "flex",
                   justifyContent: "center",
-                  paddingX: 2,
-                  paddingY: 2,
-                  width: 250,
+                  paddingX: { xs: 0, md: 2 },
+                  paddingY: { xs: 1, md: 2 },
+                  width: { xs: "100%", md: 250 },
                   flexDirection: "column",
+                  textAlign: { xs: "center", md: "left" },
                   color: theme.palette.mode === "dark" ? "white" : "grey",
                 }}
               >
-                <Typography variant="subtitle1">
+                <Typography variant="subtitle1" fontSize={{ xs: 14, md: 16 }}>
                   Essential Care for Every <br />
                   Skiin Clean,effective <br />
                   skincare powered by nature.
                 </Typography>
-                <Typography
-                  variant="h6"
-                  fontSize={15}
-                  sx={{
-                    color: "grey",
-                    borderRadius: "4px",
-                    fontWeight: "bold",
-                    alignItems: "center",
-                    paddingY: 10,
-                    paddingX: 2,
-                  }}
-                >
-                  <span style={{ color: "green" }}>● Aloe Green</span> ←
+                <Box sx={{ mt: 2 }}>
                   <Typography
-                    fontSize={15}
-                    fontWeight="bold"
-                    sx={{ color: "purple" }}
+                    variant="h6"
+                    fontSize={{ xs: 13, md: 15 }}
+                    sx={{
+                      color: "grey",
+                      fontWeight: "bold",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: { xs: "center", md: "flex-start" },
+                      gap: 0.5,
+                    }}
                   >
-                    ● Lavandar Caim
+                    <span style={{ color: "green" }}>● Aloe Green</span>
+                    <span style={{ color: "purple" }}>● Lavender Calm</span>
+                    <span style={{ color: "red" }}>● Rose Berry</span>
+                    <span style={{ color: "skyblue" }}>● Citrus Zest</span>
                   </Typography>
-                  <Typography
-                    fontSize={15}
-                    fontWeight="bold"
-                    sx={{ color: "red" }}
-                  >
-                    ● Rose barry
-                  </Typography>
-                  <Typography
-                    fontSize={15}
-                    fontWeight="bold"
-                    sx={{ color: "skyblue" }}
-                  >
-                    ● Citrus Zest
-                  </Typography>
-                </Typography>
+                </Box>
               </Box>
               {/* middel or image section */}
 
               <Box
                 sx={{
                   display: "flex",
-                  padding: 2,
+                  padding: { xs: 1, md: 2 },
                   alignItems: "center",
                   position: "relative",
                   justifyContent: "center",
-                  width: 340,
-                  height: 350,
+                  width: { xs: 260, md: 340 },
+                  height: { xs: 260, md: 350 },
                   borderRadius: "50%",
                   border: "3px solid grey",
                   overflow: "hidden",
@@ -119,8 +105,8 @@ export default function Products() {
                 <Box
                   sx={{
                     position: "relative",
-                    width: 400,
-                    height: 300,
+                    width: { xs: 280, md: 400 },
+                    height: { xs: 240, md: 300 },
                     borderRadius: "50%",
                     border: "3px solid grey",
                     overflow: "hidden",
@@ -140,19 +126,28 @@ export default function Products() {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  paddingY: 3,
-                  paddingX: 1,
+                  paddingY: { xs: 2, md: 3 },
+                  paddingX: { xs: 0, md: 1 },
                   gap: 2,
+                  textAlign: { xs: "center", md: "left" },
                   color: theme.palette.mode === "dark" ? "white" : "grey",
                 }}
               >
-                <Typography variant="h1" fontWeight="bold" fontSize={35}>
+                <Typography
+                  variant="h1"
+                  fontWeight="bold"
+                  fontSize={{ xs: 24, md: 35 }}
+                >
                   Natural Care
                   <br /> for Every Skin
                 </Typography>
                 <br />
                 <br />
-                <Typography variant="subtitle1" paddingX={3}>
+                <Typography
+                  variant="subtitle1"
+                  paddingX={{ xs: 0, md: 3 }}
+                  fontSize={{ xs: 13, md: 16 }}
+                >
                   Brining natures best
                   <br /> into your daily routine
                   <br />
@@ -167,6 +162,7 @@ export default function Products() {
             {/* bottom part */}
             <Box
               sx={{
+                gap: { xs: 2, md: 3 },
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
@@ -181,7 +177,7 @@ export default function Products() {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
-                  gap: 2,
+                  gap: { xs: 1, sm: 2, md: 4 },
                   alignItems: "center",
                   justifyContent: "center",
                 }}

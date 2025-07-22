@@ -12,27 +12,32 @@ export default function ProductFeat() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          paddingX: 2,
-          paddingY: 2,
-          gap: 2,
+          paddingX: { xs: 1, md: 2 },
+          paddingY: { xs: 1, md: 2 },
+          gap: { xs: 1, md: 2 },
         }}
       >
         <Container maxWidth="xl">
-          <Typography variant="h6" fontWeight="bold" fontSize={40}>
+          <Typography
+            variant="h6"
+            fontWeight="bold"
+            fontSize={{ xs: 30, md: 40 }}
+          >
             ELEVATE THE WAY YOU CARRY
           </Typography>
-          <Typography variant="subtitle1" fontSize={15}>
+          <Typography variant="subtitle1" fontSize={{ xs: 10, md: 15 }}>
             Provide things together professional uttility and convensional np
             need to carry two bags.
           </Typography>
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { xs: "column", md: "row" },
               justifyContent: "space-between",
-              paddingX: 2,
-              paddingY: 2,
-              gap: 2,
+              paddingX: { xs: 1, md: 2 },
+              paddingY: { xs: 1, md: 2 },
+              gap: { xs: 1, md: 2 },
+              alignItems: { xs: "center", md: "left" },
             }}
           >
             <Box
@@ -41,10 +46,10 @@ export default function ProductFeat() {
                 bgcolor: "lightgrey",
                 flexDirection: "column",
                 justifyContent: "center",
-                height: 180,
-                width: 500,
-                paddingY: 2,
-                paddingX: 2,
+                height: { xs: "50%", md: 180 },
+                width: { xs: 250, md: 500 },
+                paddingY: { xs: 1, md: 2 },
+                paddingX: { xs: 1, md: 2 },
               }}
             >
               <Typography variant="subtitle1" fontSize={15}>

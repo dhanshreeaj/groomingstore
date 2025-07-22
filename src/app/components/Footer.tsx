@@ -6,7 +6,6 @@ import {
   Button,
   IconButton,
   Link,
-  Modal,
   Container,
   useTheme,
 } from "@mui/material";
@@ -15,6 +14,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FaceBookIcon from "@mui/icons-material/Facebook";
+
 export default function Footer() {
   const theme = useTheme();
   return (
@@ -23,30 +23,21 @@ export default function Footer() {
       <Box
         sx={{
           display: "flex",
-          padding: 8,
-          gap: 2,
+          py: { xs: 4, md: 8 },
+          px: { xs: 2, md: 4 },
           justifyContent: "center",
           bgcolor: theme.palette.mode === "dark" ? "white" : "black",
           color: theme.palette.mode === "dark" ? "black" : "white",
         }}
       >
-        <Container
-          maxWidth="xl"
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <Container maxWidth="xl">
           {/* footer containt*/}
           <Box
             sx={{
               display: "flex",
-              padding: 3,
-              gap: 1,
+              p: { xs: 2, sm: 3, md: 4 },
               flexDirection: "column",
               borderRadius: "12px",
-              height: 500,
               bgcolor: theme.palette.mode === "dark" ? "black" : "white",
               color: theme.palette.mode === "dark" ? "white" : "black",
             }}
@@ -55,74 +46,57 @@ export default function Footer() {
             <Box
               sx={{
                 display: "flex",
-                height: 400,
+                flexDirection: { xs: "column", md: "row" },
+                gap: { xs: 4, md: 6 },
+                mb: 4,
               }}
             >
               {/* social media containt */}
-              <Box
-                sx={{
-                  display: "flex",
-                  padding: 6,
-                  gap: 1,
-                  flexDirection: "column",
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold" fontSize={60}>
+              <Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
+                <Typography
+                  variant="subtitle1"
+                  fontWeight="bold"
+                  fontSize={{ xs: 40, sm: 50, md: 60 }}
+                >
                   Hashnode
                 </Typography>
-                <Typography variant="h6" fontSize={15}>
+                <Typography
+                  variant="h6"
+                  fontSize={{ xs: 13, sm: 15 }}
+                  mt={1}
+                  mb={2}
+                >
                   Hassle-free blogging platform that developers and team love.
                 </Typography>
                 <Box>
-                  <IconButton
-                    color="inherit"
-                    href="https://x.com/i/flow/login"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <XIcon />
-                  </IconButton>
-                  <IconButton
-                    color="inherit"
-                    href="https://www.linkedin.com/login"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LinkedInIcon />
-                  </IconButton>
-                  <IconButton
-                    color="inherit"
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaceBookIcon />
-                  </IconButton>
-                  <IconButton
-                    color="inherit"
-                    href="https://www.instagram.com/accounts/login/?hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <InstagramIcon />
-                  </IconButton>
-                  <IconButton
-                    color="inherit"
-                    href="https://www.youtube.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <YouTubeIcon />
-                  </IconButton>
+                  {[
+                    XIcon,
+                    LinkedInIcon,
+                    FaceBookIcon,
+                    InstagramIcon,
+                    YouTubeIcon,
+                  ].map((Icon, index) => (
+                    <IconButton
+                      key={index}
+                      color="inherit"
+                      sx={{ mx: 0.5 }}
+                      component="a"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon />
+                    </IconButton>
+                  ))}
                 </Box>
                 <Button
                   variant="outlined"
                   sx={{
+                    mt: 2,
                     bgcolor: theme.palette.mode === "dark" ? "white" : "black",
                     color: theme.palette.mode === "dark" ? "black" : "white",
                     borderRadius: "10px",
                     borderColor: "black",
-                    width: 240,
                     "&:hover": {
                       bgcolor: "grey",
                       color: "white",
@@ -132,14 +106,17 @@ export default function Footer() {
                   All systems operational{" "}
                 </Button>
               </Box>
+
               {/* company detail */}
               <Box
                 sx={{
+                  flex: 2,
                   display: "flex",
-                  width: 800,
-                  padding: 2,
-                  gap: 1,
-                  flexDirection: "row",
+                  flexDirection: { xs: "column", sm: "row" },
+                  gap: { xs: 2, sm: 4, md: 8 },
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  textAlign: { xs: "center", sm: "left" },
                 }}
               >
                 {/* first section */}
@@ -540,72 +517,35 @@ export default function Footer() {
             <Box
               sx={{
                 display: "flex",
-                width: 1100,
-                height: 100,
-                gap: 2,
-                padding: 1,
+                flexDirection: { xs: "column", md: "row" },
+                justifyContent: "space-between",
+                alignItems: "center",
+                pt: 2,
+                gap: { xs: 2, md: 0 },
               }}
             >
-              {/*year */}
-              <Box
-                sx={{
-                  display: "flex",
-                  width: 700,
-                  padding: 2,
-                }}
-              >
-                <Typography variant="subtitle1" color="grey">
-                  © 2025 Hashnode-LinearBytes Inc.
-                </Typography>
-              </Box>
-              {/* policy section */}
-              <Box
-                sx={{
-                  display: "flex",
-                  width: 400,
-                  padding: 2,
-                  gap: 2,
-                }}
-              >
-                <Typography
-                  variant="subtitle1"
-                  color="grey"
-                  sx={{
-                    cursor: "pointer",
-                    transition: "color 0.3s ease",
-                    "&:hover": {
-                      color: theme.palette.mode === "dark" ? "white" : "black",
-                    },
-                  }}
-                >
-                  Privacy Ploicy
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  color="grey"
-                  sx={{
-                    cursor: "pointer",
-                    transition: "color 0.3s ease",
-                    "&:hover": {
-                      color: theme.palette.mode === "dark" ? "white" : "black",
-                    },
-                  }}
-                >
-                  Terms
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  color="grey"
-                  sx={{
-                    cursor: "pointer",
-                    transition: "color 0.3s ease",
-                    "&:hover": {
-                      color: theme.palette.mode === "dark" ? "white" : "black",
-                    },
-                  }}
-                >
-                  Code of Conduct
-                </Typography>
+              <Typography variant="subtitle2" color="grey">
+                © 2025 Hashnode-LinearBytes Inc.
+              </Typography>
+              <Box display="flex" gap={2}>
+                {["Privacy Policy", "Terms", "Code of Conduct"].map(
+                  (item, i) => (
+                    <Typography
+                      key={i}
+                      variant="subtitle2"
+                      color="grey"
+                      sx={{
+                        cursor: "pointer",
+                        "&:hover": {
+                          color:
+                            theme.palette.mode === "dark" ? "white" : "black",
+                        },
+                      }}
+                    >
+                      {item}
+                    </Typography>
+                  )
+                )}
               </Box>
             </Box>
           </Box>

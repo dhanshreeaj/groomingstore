@@ -104,7 +104,7 @@ const Navbar = () => {
       sx={{
         backgroundColor: "black",
         boxShadow: "none",
-        paddingY: 1,
+        padding: 1,
         bgcolor: theme.palette.mode === "dark" ? "white" : "black",
         color: theme.palette.mode === "dark" ? "black" : "white",
       }}
@@ -139,7 +139,7 @@ const Navbar = () => {
             <Box
               sx={{
                 position: "absolute",
-                left: "50%",
+                left: "40%",
                 transform: "translateX(-50%)",
               }}
             >

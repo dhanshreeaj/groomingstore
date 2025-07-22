@@ -34,7 +34,7 @@ export default function ProductDetails() {
       <Box
         sx={{
           display: "flex",
-          padiing: 2,
+          padiing: { xs: 2, md: 4 },
         }}
       >
         <Container
@@ -50,8 +50,9 @@ export default function ProductDetails() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              paddingX: 4,
-              paddingY: 6,
+              paddingX: { xs: 2, md: 4 },
+              paddingY: { xs: 3, md: 6 },
+              width: "100%",
             }}
           >
             {/* product name and desc */}
@@ -97,10 +98,18 @@ export default function ProductDetails() {
                   KTWO
                 </Button>
               </Stack>
-              <Typography variant="h6" fontWeight="bold" fontSize={30}>
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                fontSize={{ xs: 22, sm: 26, md: 30 }}
+              >
                 SANTECO KTWO SPORTS BOTTLE
               </Typography>
-              <Typography variant="h6" color="grey" fontSize={15}>
+              <Typography
+                variant="h6"
+                color="grey"
+                fontSize={{ xs: 13, md: 15 }}
+              >
                 Flip over drinking makes drinking water easy in any environment
               </Typography>
             </Box>
@@ -108,8 +117,10 @@ export default function ProductDetails() {
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "row",
-                padding: 2,
+                flexDirection: { xs: "column", md: "row" },
+                padding: { xs: 1, md: 2 },
+                gap: { xs: 2, md: 4 },
+                alignItems: "center",
               }}
             >
               {/* product image section */}
@@ -121,6 +132,7 @@ export default function ProductDetails() {
                   alignItems: "center",
                   paddingX: 2,
                   borderRadius: "30px",
+                  gap: 2,
                 }}
               >
                 <Box
@@ -141,8 +153,8 @@ export default function ProductDetails() {
                     <Image
                       src="/faceserium.png"
                       alt="Product Image"
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={80}
                       style={{ objectFit: "cover" }}
                     />
                   </Box>
@@ -182,8 +194,8 @@ export default function ProductDetails() {
                 <Image
                   src="/faceserium2.png"
                   alt="Product Image"
-                  width={300}
-                  height={400}
+                  width={250}
+                  height={350}
                   style={{ objectFit: "cover" }}
                 />
               </Box>
@@ -194,9 +206,14 @@ export default function ProductDetails() {
                   padding: 2,
                   gap: 2,
                   flexDirection: "column",
+                  width: { xs: "100%", md: "auto" },
                 }}
               >
-                <Typography variant="subtitle1" fontWeight="bold" fontSize={30}>
+                <Typography
+                  variant="subtitle1"
+                  fontWeight="bold"
+                  fontSize={{ xs: 22, md: 30 }}
+                >
                   KOTKA
                 </Typography>
                 <Box
@@ -206,11 +223,7 @@ export default function ProductDetails() {
                     gap: 2,
                   }}
                 >
-                  <Typography
-                    variant="subtitle2"
-                    fontSize={15}
-                    flexDirection="row"
-                  >
+                  <Typography variant="subtitle2" fontSize={15}>
                     COLOR
                   </Typography>
                   {/* color sector*/}

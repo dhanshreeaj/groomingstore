@@ -10,8 +10,8 @@ export default function News() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          padding: 2,
-          gap: 2,
+          padding: { xs: 1, md: 2 },
+          gap: { xs: 1, md: 2 },
         }}
       >
         <Container maxWidth="xl">
@@ -20,14 +20,18 @@ export default function News() {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { xs: "column", md: "row" },
               justifyContent: "space-between",
-              paddingX: 2,
-              paddingY: 4,
+              paddingX: { xs: 1, md: 2 },
+              paddingY: { xs: 1, md: 3 },
               alignItems: "center",
             }}
           >
-            <Typography variant="subtitle1" fontWeight="bold" fontSize={40}>
+            <Typography
+              variant="subtitle1"
+              fontWeight="bold"
+              fontSize={{ xs: 30, md: 40 }}
+            >
               NEWS & ARTICLES
             </Typography>
             <Button
@@ -38,7 +42,7 @@ export default function News() {
                 textTransform: "none",
                 borderRadius: "30px",
                 borderColor: "black",
-                height: 40,
+                fontSize: { xs: 10, md: 15 },
                 "&:hover": {
                   bgcolor: "black",
                   color: "white",
@@ -52,7 +56,7 @@ export default function News() {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { xs: "column", md: "row" },
               padding: 2,
               justifyContent: "space-around",
             }}

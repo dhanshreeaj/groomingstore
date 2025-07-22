@@ -12,8 +12,7 @@ export default function FAQ() {
       <Box
         sx={{
           display: "flex",
-          padding: 8,
-          gap: 2,
+          padding: { xs: 2, md: 8 },
           justifyContent: "center",
         }}
       >
@@ -21,19 +20,24 @@ export default function FAQ() {
           maxWidth="xl"
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column", md: "row" },
+            gap: { xs: 4, md: 8 },
           }}
         >
           {/* left side title section */}
           <Box
             sx={{
-              display: "flex",
-              padding: 2,
-              width: 600,
-              flexDirection: "column",
+              flex: 1,
+              padding: { xs: 1, md: 2 },
+              width: { xs: "100%", md: 600 },
             }}
           >
-            <Typography variant="h6" fontWeight="bold" fontSize={40}>
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              fontSize={{ xs: 24, sm: 32, md: 40 }}
+              mb={2}
+            >
               Frequently asked questions
             </Typography>
             <br />
@@ -43,9 +47,10 @@ export default function FAQ() {
               sx={{
                 cursor: "pointer",
                 transition: "color 0.3s ease",
-                "&:hover": {
-                  color: "grey",
-                },
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+                "&:hover": { color: "grey" },
               }}
             >
               <ForumIcon fontSize="medium" />
@@ -55,10 +60,11 @@ export default function FAQ() {
           {/* right side section of QA */}
           <Box
             sx={{
-              display: "flex",
-              padding: 8,
-              flexDirection: "column",
+              flex: 1,
+              padding: { xs: 1, md: 2 },
               gap: 2,
+              display: "flex",
+              flexDirection: "column",
             }}
           >
             <Accordion>

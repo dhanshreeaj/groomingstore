@@ -12,7 +12,7 @@ export default function ProductInfo() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          padding: 2,
+          padding: { xs: 2, md: 4 },
           color: theme.palette.mode === "dark" ? "white" : "black",
         }}
       >
@@ -30,8 +30,8 @@ export default function ProductInfo() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              padding: 2,
-              gap: 2,
+              padding: { xs: 1, md: 2 },
+              gap: { xs: 2, md: 3 },
             }}
           >
             {/* info containt */}
@@ -42,12 +42,21 @@ export default function ProductInfo() {
                 justifyContent: "center",
                 alignItems: "center",
                 gap: 1,
+                textAlign: "center",
               }}
             >
-              <Typography variant="h6" fontWeight="bold" fontSize={30}>
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                fontSize={{ xs: 22, sm: 26, md: 30 }}
+              >
                 Complete Beauty, Naturally
               </Typography>
-              <Typography variant="h6" align="center" fontSize={16}>
+              <Typography
+                variant="h6"
+                align="center"
+                fontSize={{ xs: 14, md: 16 }}
+              >
                 From skin hydration to effortless makeup,our product are
                 designed to
                 <br />
@@ -61,10 +70,11 @@ export default function ProductInfo() {
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: { xs: "column", sm: "row" },
                 justifyContent: "center",
                 alignItems: "center",
-                gap: 4,
+                gap: { xs: 2, sm: 4 },
+                flexWrap: "wrap",
               }}
             >
               <Box
@@ -139,11 +149,11 @@ export default function ProductInfo() {
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: { xs: "column", md: "row" },
                 justifyContent: "center",
                 alignItems: "center",
-                gap: 4,
-                padding: 2,
+                gap: { xs: 3, md: 4 },
+                padding: { xs: 2, md: 4 },
               }}
             >
               {/* left side part*/}
@@ -151,16 +161,22 @@ export default function ProductInfo() {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: 2.5,
-                  padding: 2,
+                  gap: { xs: 1.5, md: 2.5 },
+                  padding: { xs: 1, md: 2 },
+                  textAlign: { xs: "center", md: "left" },
                 }}
               >
-                <Typography variant="h6" fontWeight="bold" fontSize={30}>
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  fontSize={{ xs: 22, md: 30 }}
+                >
                   Nature Inspires <br />
                   Everything We Create
                 </Typography>
                 <Typography
                   variant="h6"
+                  fontSize={{ xs: 14, md: 16 }}
                   sx={{
                     color: theme.palette.mode === "dark" ? "white" : "grey",
                   }}
@@ -172,9 +188,10 @@ export default function ProductInfo() {
                 <Box
                   sx={{
                     display: "flex",
-                    flexDirection: "row",
-                    gap: 4,
-                    paddinY: 5,
+                    flexDirection: { xs: "column", sm: "row" },
+                    gap: { xs: 1, sm: 4 },
+                    paddingY: { xs: 2, md: 5 },
+                    textAlign: "center",
                   }}
                 >
                   <Typography
@@ -221,8 +238,10 @@ export default function ProductInfo() {
                   flexDirection: "column",
                   alignItems: "center",
                   position: "relative",
-                  borderRadius: "80px",
+                  borderRadius: "20px",
                   overflow: "hidden",
+                  width: { xs: 200, md: 300 },
+                  height: { xs: 250, md: 350 },
                 }}
               >
                 <Image
