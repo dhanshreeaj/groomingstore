@@ -81,22 +81,6 @@ const Navbar = () => {
           Shop
         </Button>
       </Link>
-      <Button
-        sx={{
-          color: theme.palette.mode === "dark" ? "black" : "white",
-          textTransform: "none",
-        }}
-      >
-        Our Story
-      </Button>
-      <Button
-        sx={{
-          color: theme.palette.mode === "dark" ? "black" : "white",
-          textTransform: "none",
-        }}
-      >
-        News & Event
-      </Button>
     </Stack>
   );
   return (
@@ -129,6 +113,7 @@ const Navbar = () => {
                   mask: 'url("/logo.png") no-reap center / contain',
                   width: 60,
                   height: 60,
+                  cursor: "pointer",
                 }}
               />
             </Link>
@@ -153,7 +138,7 @@ const Navbar = () => {
             <Box
               sx={{
                 position: "absolute",
-                left: "40%",
+                left: "45%",
                 transform: "translateX(-50%)",
               }}
             >
