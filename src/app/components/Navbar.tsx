@@ -81,6 +81,16 @@ const Navbar = () => {
           Shop
         </Button>
       </Link>
+      <Link href="/contact" passHref>
+        <Button
+          sx={{
+            color: theme.palette.mode === "dark" ? "black" : "white",
+            textTransform: "none",
+          }}
+        >
+          Contact Us
+        </Button>
+      </Link>
     </Stack>
   );
   return (
