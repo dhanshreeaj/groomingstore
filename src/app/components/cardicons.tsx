@@ -66,7 +66,7 @@ export default function CardIcon() {
             paddingY: { xs: 2, md: 4 },
             width: "100%",
             bgcolor: theme.palette.background.default,
-            color: theme.palette.text.secondary,
+            color: theme.palette.text.primary,
           }}
         >
           {/*text part */}
@@ -133,7 +133,7 @@ export default function CardIcon() {
                   "*": {
                     textAlign: "center",
                   },
-                  color: theme.palette.text.primary,
+                  color: theme.palette.text.secondary,
                   "&:hover": { bgcolor: "grey", cursor: "pointer" },
                   display: "flex",
                   flexDirection: "column",
@@ -145,7 +145,10 @@ export default function CardIcon() {
                 </Typography>
                 <Divider
                   flexItem
-                  sx={{ mb: 3, borderBottomColor: theme.palette.text.primary }}
+                  sx={{
+                    mb: 3,
+                    borderBottomColor: theme.palette.text.secondary,
+                  }}
                 />
                 <Typography variant="body2" align="center">
                   {desc}

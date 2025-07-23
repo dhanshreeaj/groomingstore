@@ -54,10 +54,11 @@ export default function Contact() {
       <Box
         sx={{
           display: "flex",
-          py: { xs: 2, md: 4 },
+          py: { xs: 2, md: 15 },
           px: { xs: 2, md: 4 },
           justifyContent: "center",
-          bgcolor: theme.palette.mode === "dark" ? "black" : "white",
+          bgcolor: theme.palette.background.default,
+          color: theme.palette.text.primary,
         }}
       >
         <Container maxWidth="xl">
@@ -69,8 +70,8 @@ export default function Contact() {
               px: { xs: 3, md: 15 },
               flexDirection: "column",
               textAlign: { xs: "center", md: "left" },
-              bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-              color: theme.palette.mode === "dark" ? "black" : "white",
+              bgcolor: theme.palette.background.paper,
+              color: theme.palette.text.secondary,
             }}
           >
             <Typography fontWeight="bold" fontSize={{ xs: 30, sm: 40, md: 60 }}>
@@ -103,7 +104,7 @@ export default function Contact() {
                   width: { xs: 300, md: 400 },
                   px: { xs: 2 },
                   gap: 2,
-                  color: theme.palette.mode === "dark" ? "black" : "white",
+                  color: theme.palette.text.secondary,
                 }}
               >
                 <TextField
@@ -113,15 +114,19 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  InputLabelProps={{ style: { color: "grey" } }}
+                  InputLabelProps={{
+                    style: {
+                      color: theme.palette.text.secondary,
+                    },
+                  }}
                   InputProps={{
                     style: {
-                      color: theme.palette.mode === "dark" ? "black" : "white",
-                      borderBottom: "3px solid ",
+                      color: theme.palette.text.secondary,
+                      borderBottom: "2px solid ",
                     },
                   }}
                   sx={{
-                    color: theme.palette.mode === "dark" ? "black" : "white",
+                    color: theme.palette.text.secondary,
                   }}
                 />
                 <TextField
@@ -131,15 +136,17 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  InputLabelProps={{ style: { color: "grey" } }}
+                  InputLabelProps={{
+                    style: { color: theme.palette.text.secondary },
+                  }}
                   InputProps={{
                     style: {
-                      color: theme.palette.mode === "dark" ? "black" : "white",
-                      borderBottom: "3px solid ",
+                      color: theme.palette.text.secondary,
+                      borderBottom: "2px solid ",
                     },
                   }}
                   sx={{
-                    color: theme.palette.mode === "dark" ? "black" : "white",
+                    color: theme.palette.text.secondary,
                   }}
                 />
                 <TextField
@@ -150,25 +157,27 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  InputLabelProps={{ style: { color: "grey" } }}
+                  InputLabelProps={{
+                    style: { color: theme.palette.text.secondary },
+                  }}
                   InputProps={{
                     style: {
-                      color: theme.palette.mode === "dark" ? "black" : "white",
+                      color: theme.palette.text.secondary,
                       borderBottom: "3px solid ",
                     },
                   }}
                   sx={{
-                    color: theme.palette.mode === "dark" ? "black" : "white",
+                    color: theme.palette.text.secondary,
                   }}
                 />
                 <Button
                   type="submit"
                   variant="contained"
                   sx={{
-                    bgcolor: "grey",
+                    bgcolor: theme.palette.background.default,
                     textTransform: "none",
                     fontWeight: "bold",
-                    color: theme.palette.mode === "dark" ? "black" : "white",
+                    color: theme.palette.text.primary,
                   }}
                 >
                   Send

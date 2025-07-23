@@ -97,6 +97,7 @@ function ProductCard({ product }: { product: Product }) {
         p: 2,
         borderRadius: 2,
         alignItems: "center",
+        color: "text.secondary",
       }}
     >
       <Image
@@ -150,15 +151,16 @@ export default function ShopPage() {
           alignItems: "center",
           textAlign: { xs: "center", md: "left" },
           px: { xs: 2, md: 3 },
-          py: 4,
+          py: { xs: 4, md: 14 },
           gap: 4,
           justifyContent: "space-between",
+          color: theme.palette.text.primary,
         }}
       >
         <Typography variant="h3" fontWeight="bold">
           ALL PRODUCTS. <br /> ALL STORIES.
         </Typography>
-        <Typography variant="subtitle1" color="text.secondary">
+        <Typography variant="subtitle1" color="text.primary">
           Effortless routines, clean formulas, no fluff. This is grooming
           without vanity.
         </Typography>

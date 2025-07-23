@@ -52,7 +52,7 @@ export default function Footer() {
           px: { xs: 2, md: 4 },
           justifyContent: "center",
           bgcolor: theme.palette.background.default,
-          color: theme.palette.text.secondary,
+          color: theme.palette.text.primary,
         }}
       >
         <Container maxWidth="xl">
@@ -64,7 +64,7 @@ export default function Footer() {
               flexDirection: "column",
               borderRadius: "12px",
               bgcolor: theme.palette.background.paper,
-              color: theme.palette.text.primary,
+              color: theme.palette.text.secondary,
             }}
           >
             {/* first box part for socail media */}
@@ -141,7 +141,7 @@ export default function Footer() {
                   sx={{
                     mt: 2,
                     bgcolor: theme.palette.background.default,
-                    color: theme.palette.text.secondary,
+                    color: theme.palette.text.primary,
                     borderColor: "black",
                     "&:hover": {
                       bgcolor: "grey",
@@ -189,8 +189,7 @@ export default function Footer() {
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "gray",
                       },
                     }}
                   >
@@ -199,13 +198,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -214,13 +213,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -229,13 +228,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -251,13 +250,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -266,13 +265,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -281,13 +280,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -296,13 +295,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -328,13 +327,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    // color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -343,13 +342,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -358,13 +357,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -373,13 +372,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -387,13 +386,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -402,13 +401,13 @@ export default function Footer() {
                   <Link href="/faq" style={{ textDecoration: "none" }}>
                     <Typography
                       variant="caption"
-                      color="grey"
+                      //color="grey"
                       sx={{
+                        color: theme.palette.text.secondary,
                         cursor: "pointer",
                         transition: "color 0.3s ease",
                         "&:hover": {
-                          color:
-                            theme.palette.mode === "dark" ? "white" : "black",
+                          color: "grey",
                         },
                       }}
                     >
@@ -425,13 +424,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -440,13 +439,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -454,13 +453,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -486,13 +485,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -509,13 +508,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -524,13 +523,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    //color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -539,13 +538,13 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    // color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >
@@ -566,7 +565,10 @@ export default function Footer() {
                 gap: { xs: 2, md: 0 },
               }}
             >
-              <Typography variant="subtitle2" sx={{ color: "grey" }}>
+              <Typography
+                variant="subtitle2"
+                sx={{ color: theme.palette.text.secondary }}
+              >
                 © 2025 Stallion-Grooming Inc.
               </Typography>
               <Stack
@@ -582,11 +584,10 @@ export default function Footer() {
                     key={i}
                     variant="subtitle2"
                     sx={{
-                      color: "grey",
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       "&:hover": {
-                        color:
-                          theme.palette.mode === "dark" ? "white" : "black",
+                        color: "grey",
                       },
                     }}
                   >

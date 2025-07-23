@@ -47,7 +47,7 @@ export default function ProductFeatures() {
                 borderRadius: "15px",
                 justifyContent: "center",
                 bgcolor: theme.palette.background.default,
-                color: theme.palette.text.secondary,
+                color: theme.palette.text.primary,
               }}
             >
               <Typography
@@ -101,7 +101,7 @@ export default function ProductFeatures() {
                 flexDirection: "column",
                 padding: { xs: 2, sm: 3, md: 4 },
                 bgcolor: theme.palette.background.default,
-                color: theme.palette.text.secondary,
+                color: theme.palette.text.primary,
               }}
             >
               <Typography
@@ -176,7 +176,7 @@ export default function ProductFeatures() {
                 borderRadius: "15px",
                 justifyContent: "center",
                 bgcolor: theme.palette.background.default,
-                color: theme.palette.text.secondary,
+                color: theme.palette.text.primary,
               }}
             >
               <Typography

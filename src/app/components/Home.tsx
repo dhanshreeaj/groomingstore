@@ -31,7 +31,7 @@ export default function Home() {
               // bgcolor: theme.palette.mode === "dark" ? "black" : "white",
               //color: theme.palette.mode === "dark" ? "white" : "black",
               bgcolor: theme.palette.background.default,
-              color: theme.palette.text.secondary,
+              color: theme.palette.text.primary,
 
               textAlign: { xs: "center", md: "left" },
             }}
@@ -59,7 +59,7 @@ export default function Home() {
                 fontSize: { xs: "0.4rem", md: "1rem" },
                 textTransform: "none",
                 bgcolor: theme.palette.background.paper,
-                color: theme.palette.text.primary,
+                color: theme.palette.text.secondary,
                 "&:hover": {
                   bgcolor: "grey",
                   color: "black",

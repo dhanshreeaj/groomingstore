@@ -23,7 +23,7 @@ export default function Review() {
     alignItems: "center",
     transition: "transform 0.2s ease-in-out",
     bgcolor: theme.palette.background.default,
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
     "&:hover": {
       transform: "rotate(5deg)",
       backgroundColor: "grey",
@@ -127,7 +127,7 @@ export default function Review() {
           padding: 2,
           justifyContent: "center",
           bgcolor: theme.palette.background.paper,
-          color: theme.palette.text.primary,
+          color: theme.palette.text.secondary,
         }}
       >
         <Container maxWidth="xl">
@@ -159,7 +159,7 @@ export default function Review() {
                 textAlign: "center",
                 padding: 2,
                 justifyContent: "space-between",
-                color: theme.palette.text.primary,
+                color: theme.palette.text.secondary,
               }}
             >
               <Typography

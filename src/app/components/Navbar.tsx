@@ -42,7 +42,7 @@ const Navbar = () => {
       spacing={2}
       sx={{
         bgcolor: theme.palette.background.paper,
-        color: theme.palette.text.primary,
+        color: theme.palette.text.secondary,
         paddingX: 1,
         paddingY: 0.5,
         borderRadius: "20px",
@@ -53,7 +53,7 @@ const Navbar = () => {
         <Link key={href} href={href} passHref>
           <Button
             sx={{
-              color: theme.palette.text.primary,
+              color: theme.palette.text.secondary,
               textTransform: "none",
             }}
           >
@@ -91,7 +91,7 @@ const Navbar = () => {
                 color="inherit"
                 onClick={toggleDrawer(true)}
                 sx={{
-                  color: theme.palette.text.primary,
+                  color: theme.palette.text.secondary,
                 }}
               >
                 <MenuIcon />
@@ -115,7 +115,7 @@ const Navbar = () => {
                 variant="h6"
                 fontWeight="bold"
                 sx={{
-                  color: theme.palette.text.primary,
+                  color: theme.palette.text.secondary,
                   "&:hover": {
                     color: "pink",
                   },
@@ -159,9 +159,9 @@ const Navbar = () => {
                   sx={{
                     textTransform: "none",
                     bgcolor: theme.palette.background.default,
-                    color: theme.palette.text.secondary,
+                    color: theme.palette.text.primary,
                     "&:hover": {
-                      backgroundColor: "black",
+                      backgroundColor: "grey",
                     },
                     borderRadius: "20px",
                     paddingX: 1,
@@ -181,32 +181,34 @@ const Navbar = () => {
               alignItems: "center",
               gap: 2,
               bgcolor: theme.palette.background.paper,
-              color: theme.palette.text.primary,
+              color: theme.palette.text.secondary,
             }}
           >
             <ThemeToggleButton />
-            <IconButton sx={{ color: theme.palette.text.primary }}>
+            <IconButton sx={{ color: theme.palette.text.secondary }}>
               <SearchIcon />
             </IconButton>
-            <IconButton sx={{ color: theme.palette.text.primary }}>
+            <IconButton sx={{ color: theme.palette.text.secondary }}>
               <ShoppingBagIcon />
             </IconButton>
             {!isMobail && (
-              <Button
-                variant="contained"
-                sx={{
-                  textTransform: "none",
-                  bgcolor: theme.palette.background.default,
-                  color: theme.palette.text.secondary,
-                  "&:hover": {
-                    backgroundColor: "black",
-                  },
-                  borderRadius: "20px",
-                  paddingX: 1,
-                }}
-              >
-                Login
-              </Button>
+              <Link href="/login" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    textTransform: "none",
+                    bgcolor: theme.palette.background.default,
+                    color: theme.palette.text.primary,
+                    "&:hover": {
+                      backgroundColor: "grey",
+                    },
+                    borderRadius: "20px",
+                    paddingX: 1,
+                  }}
+                >
+                  Login
+                </Button>
+              </Link>
             )}
           </Box>
         </Toolbar>

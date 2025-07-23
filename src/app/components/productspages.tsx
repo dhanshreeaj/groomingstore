@@ -24,7 +24,7 @@ export default function ProductsPages() {
           alignItems: "center",
           flexDirection: "column",
           bgcolor: theme.palette.background.default,
-          color: theme.palette.text.secondary,
+          color: theme.palette.text.primary,
         }}
       >
         <Container
@@ -47,7 +47,7 @@ export default function ProductsPages() {
               paddingY: { xs: 2, md: 4 },
               marginBottom: 2,
               bgcolor: theme.palette.background.paper,
-              color: theme.palette.text.primary,
+              color: theme.palette.text.secondary,
             }}
           >
             {/*left section */}
@@ -79,7 +79,7 @@ export default function ProductsPages() {
                   variant="outlined"
                   sx={{
                     bgcolor: theme.palette.background.default,
-                    color: theme.palette.text.secondary,
+                    color: theme.palette.text.primary,
                     textTransform: "none",
                     borderRadius: "10px",
                     borderColor: "black",
@@ -95,7 +95,7 @@ export default function ProductsPages() {
                   variant="outlined"
                   sx={{
                     bgcolor: theme.palette.background.default,
-                    color: theme.palette.text.secondary,
+                    color: theme.palette.text.primary,
                     borderColor: "black",
                     textTransform: "none",
                     borderRadius: "10px",
@@ -187,7 +187,7 @@ export default function ProductsPages() {
               gap: { xs: 2, md: 1.5 },
               p: { xs: 2, md: 3 },
               bgcolor: theme.palette.background.paper,
-              color: theme.palette.text.primary,
+              color: theme.palette.text.secondary,
             }}
           >
             {/*product image by category */}
@@ -195,7 +195,7 @@ export default function ProductsPages() {
               sx={{
                 flex: 1,
                 textAlign: "center",
-                color: theme.palette.text.primary,
+                color: theme.palette.text.secondary,
               }}
             >
               <Typography
@@ -239,12 +239,13 @@ export default function ProductsPages() {
                 <Typography
                   key={cat}
                   variant="h3"
-                  color="grey"
+                  //color="grey"
                   fontSize={{ xs: 35, md: 50 }}
                   sx={{
+                    color: theme.palette.text.secondary,
                     cursor: "pointer",
                     "&:hover": {
-                      color: theme.palette.mode === "dark" ? "white" : "black",
+                      color: "grey",
                     },
                     mt: { xs: 1, md: 2 },
                   }}
@@ -259,7 +260,7 @@ export default function ProductsPages() {
               sx={{
                 flex: 1,
                 textAlign: { xs: "center", md: "left" },
-                color: theme.palette.text.primary,
+                color: theme.palette.text.secondary,
               }}
             >
               <Typography
@@ -283,7 +284,7 @@ export default function ProductsPages() {
                   variant="outlined"
                   sx={{
                     bgcolor: theme.palette.background.default,
-                    color: theme.palette.text.secondary,
+                    color: theme.palette.text.primary,
                     textTransform: "none",
                     borderRadius: "30px",
                     borderColor: "black",
@@ -299,7 +300,7 @@ export default function ProductsPages() {
                   variant="outlined"
                   sx={{
                     bgcolor: theme.palette.background.default,
-                    color: theme.palette.text.secondary,
+                    color: theme.palette.text.primary,
                     borderColor: "black",
                     textTransform: "none",
                     borderRadius: "15px",

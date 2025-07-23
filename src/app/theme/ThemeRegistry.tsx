@@ -53,7 +53,7 @@ export default function ThemeRegistry({ children }: { children: ReactNode }) {
           mode: "light",
           primary: { main: "#f5f5f5ff" },
           background: { default: "#ffffffff", paper: "#000000ff" },
-          text: { primary: "#fffcfcff", secondary: "#000000ff" },
+          text: { primary: "#000000ff", secondary: "#ffffffff" },
         },
       });
     }
@@ -63,7 +63,7 @@ export default function ThemeRegistry({ children }: { children: ReactNode }) {
           mode: "light",
           primary: { main: "#000000ff" },
           background: { default: "#000000ff", paper: "#ffffffff" },
-          text: { primary: "#000000ff", secondary: "#fdfdfdff" },
+          text: { primary: "#ffffffff", secondary: "#000000ff" },
         },
       });
     }
@@ -82,7 +82,7 @@ export default function ThemeRegistry({ children }: { children: ReactNode }) {
         palette: {
           mode: "light",
           primary: { main: "#d32f2f" },
-          background: { default: "#ffe6e6", paper: "#f79f9fff" },
+          background: { default: "#ffe6e6", paper: "#f38e8eff" },
           text: { primary: "#b71c1c", secondary: "#b71c1c" },
         },
       });

@@ -12,6 +12,7 @@ import {
   AccordionDetails,
   Button,
   Link,
+  useTheme,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ForumIcon from "@mui/icons-material/Forum";
@@ -60,9 +61,17 @@ const faqs = [
 ];
 
 export default function FAQ() {
+  const theme = useTheme();
   return (
     <Box
-      sx={{ display: "flex", justifyContent: "center", p: { xs: 2, md: 8 } }}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        px: { xs: 2, md: 8 },
+        py: { xs: 4, md: 14 },
+        bgcolor: theme.palette.background.default,
+        color: theme.palette.text.primary,
+      }}
     >
       <Container
         maxWidth="xl"
@@ -73,7 +82,12 @@ export default function FAQ() {
         }}
       >
         {/* Intro Section */}
-        <Box sx={{ flex: 1, p: { xs: 1, md: 2 } }}>
+        <Box
+          sx={{
+            flex: 1,
+            p: { xs: 1, md: 2 },
+          }}
+        >
           <Typography variant="h4" fontWeight="bold" gutterBottom>
             Frequently Asked Questions
           </Typography>
@@ -81,7 +95,11 @@ export default function FAQ() {
             startIcon={<ForumIcon />}
             component={Link}
             href="/contact"
-            sx={{ textTransform: "none", mt: 1 }}
+            sx={{
+              textTransform: "none",
+              mt: 1,
+              color: theme.palette.text.primary,
+            }}
           >
             Still need help? Chat with us.
           </Button>
@@ -98,12 +116,17 @@ export default function FAQ() {
           }}
         >
           {faqs.map((faq, idx) => (
-            <Accordion key={idx}>
+            <Accordion key={idx} sx={{ color: theme.palette.text.secondary }}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={
+                  <ExpandMoreIcon
+                    sx={{ color: theme.palette.text.secondary }}
+                  />
+                }
                 sx={{
                   flexDirection: "row-reverse",
                   "& .MuiAccordionSummary-expandIconWrapper": { mr: 1 },
+                  color: theme.palette.text.secondary,
                 }}
               >
                 <Typography variant="subtitle1" fontWeight="bold">

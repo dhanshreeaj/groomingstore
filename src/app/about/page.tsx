@@ -1,10 +1,14 @@
 // File: components/About.tsx
 
 import React from "react";
-import { Container, Typography, Box, Link } from "@mui/material";
-
+import { Container, Typography, Box, Link, useTheme } from "@mui/material";
 const About: React.FC = () => (
-  <Container maxWidth="md" sx={{ py: 4 }}>
+  <Container
+    maxWidth="md"
+    sx={{
+      py: 14,
+    }}
+  >
     <Typography variant="h4" gutterBottom>
       About Stallion Grooming
     </Typography>
