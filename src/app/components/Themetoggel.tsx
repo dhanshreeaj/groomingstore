@@ -5,6 +5,8 @@ import DarkModeIcon from "@mui/icons-material/DarkMode"; // CORRECT
 import { useCustomTheme } from "@/app/theme/ThemeRegistry"; // Correct
 import { Select, MenuItem } from "@mui/material";
 
+type ThemeMode = "light" | "dark" | "purple" | "red";
+
 export default function ThemeToggleButton() {
   const { mode, toggleTheme } = useCustomTheme();
   const { setTheme } = useCustomTheme();
@@ -16,7 +18,7 @@ export default function ThemeToggleButton() {
 
     <Select
       value={mode}
-      onChange={(e) => setTheme(e.target.value as any)}
+      onChange={(e) => setTheme(e.target.value as ThemeMode)}
       size="small"
       variant="outlined"
       sx={{
