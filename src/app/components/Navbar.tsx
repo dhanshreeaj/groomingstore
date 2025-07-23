@@ -19,8 +19,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import Link from "next/link";
 import ThemeToggleButton from "./Themetoggel";
-
 import MenuIcon from "@mui/icons-material/Menu";
+
+const navLinks = [
+  { href: "/products", label: "Product" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/productdetails", label: "Product Details" },
+  { href: "/shop", label: "Shop/ Pricing" },
+  { href: "/contact", label: "Contact Us" },
+  { href: "/about", label: "About Us" },
+];
+
 const Navbar = () => {
   const theme = useTheme();
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -41,56 +50,18 @@ const Navbar = () => {
         alignItems: "center",
       }}
     >
-      <Link href="/products" passHref>
-        <Button
-          sx={{
-            color: theme.palette.mode === "dark" ? "black" : "white",
-            textTransform: "none",
-          }}
-        >
-          Product
-        </Button>
-      </Link>
-      <Link href="/faq" passHref>
-        <Button
-          sx={{
-            color: theme.palette.mode === "dark" ? "black" : "white",
-            textTransform: "none",
-          }}
-        >
-          FAQ
-        </Button>
-      </Link>
-      <Link href="/productdetails" passHref>
-        <Button
-          sx={{
-            color: theme.palette.mode === "dark" ? "black" : "white",
-            textTransform: "none",
-          }}
-        >
-          Product Details
-        </Button>
-      </Link>
-      <Link href="/shop" passHref>
-        <Button
-          sx={{
-            color: theme.palette.mode === "dark" ? "black" : "white",
-            textTransform: "none",
-          }}
-        >
-          Shop
-        </Button>
-      </Link>
-      <Link href="/contact" passHref>
-        <Button
-          sx={{
-            color: theme.palette.mode === "dark" ? "black" : "white",
-            textTransform: "none",
-          }}
-        >
-          Contact Us
-        </Button>
-      </Link>
+      {navLinks.map(({ href, label }) => (
+        <Link key={href} href={href} passHref>
+          <Button
+            sx={{
+              color: theme.palette.mode === "dark" ? "black" : "white",
+              textTransform: "none",
+            }}
+          >
+            {label}
+          </Button>
+        </Link>
+      ))}
     </Stack>
   );
   return (
