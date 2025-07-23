@@ -1,244 +1,122 @@
+// File: components/FAQ.tsx
+
 "use client";
 
-import { Box, Container, Typography, useTheme } from "@mui/material";
-import ForumIcon from "@mui/icons-material/Forum";
-import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
+import React from "react";
+import {
+  Box,
+  Container,
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Button,
+  Link,
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ForumIcon from "@mui/icons-material/Forum";
+
+const faqs = [
+  {
+    question: "What products does Stallion Grooming offer?",
+    answer:
+      "We offer beard oils, balms, shampoos, conditioners, shave creams, and grooming essentials formulated with premium natural ingredients.",
+  },
+  {
+    question: "How can I place an order?",
+    answer:
+      "Browse our products, add them to your cart, and proceed to checkout via Razorpay or select Cash on Delivery where available.",
+  },
+  {
+    question: "What is your cancellation & refund policy?",
+    answer:
+      "You may cancel within 24 hours before shipment. Prepaid refunds are issued via Razorpay within 7 business days. COD orders cannot be canceled after dispatch.",
+  },
+  {
+    question: "Do you ship nationwide and what are the charges?",
+    answer:
+      "Yes, we ship across India. Shipping charges are calculated at checkout based on package weight and destination PIN code.",
+  },
+  {
+    question: "How long does delivery take?",
+    answer:
+      "Delivery typically takes 3–7 business days in metro cities and 5–10 business days in remote areas.",
+  },
+  {
+    question: "How can I track my order?",
+    answer:
+      "Once your order ships, you’ll receive a tracking ID via email and SMS. Track it on our Track Order page.",
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept prepaid payments via Razorpay (UPI, cards, netbanking) and Cash on Delivery where available.",
+  },
+  {
+    question: "How can I contact customer support?",
+    answer:
+      "Email us at support@stalliongrooming.com or chat with us using the live chat widget.",
+  },
+];
+
 export default function FAQ() {
-  const theme = useTheme();
   return (
-    <>
-      {/* main containt */}
-      <Box
+    <Box
+      sx={{ display: "flex", justifyContent: "center", p: { xs: 2, md: 8 } }}
+    >
+      <Container
+        maxWidth="xl"
         sx={{
           display: "flex",
-          padding: { xs: 2, md: 8 },
-          justifyContent: "center",
+          flexDirection: { xs: "column", md: "row" },
+          gap: { xs: 4, md: 8 },
         }}
       >
-        <Container
-          maxWidth="xl"
+        {/* Intro Section */}
+        <Box sx={{ flex: 1, p: { xs: 1, md: 2 } }}>
+          <Typography variant="h4" fontWeight="bold" gutterBottom>
+            Frequently Asked Questions
+          </Typography>
+          <Button
+            startIcon={<ForumIcon />}
+            component={Link}
+            href="/contact"
+            sx={{ textTransform: "none", mt: 1 }}
+          >
+            Still need help? Chat with us.
+          </Button>
+        </Box>
+
+        {/* FAQ List */}
+        <Box
           sx={{
+            flex: 1,
             display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            gap: { xs: 4, md: 8 },
+            flexDirection: "column",
+            gap: 2,
+            p: { xs: 1, md: 2 },
           }}
         >
-          {/* left side title section */}
-          <Box
-            sx={{
-              flex: 1,
-              padding: { xs: 1, md: 2 },
-              width: { xs: "100%", md: 600 },
-            }}
-          >
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              fontSize={{ xs: 24, sm: 32, md: 40 }}
-              mb={2}
-            >
-              Frequently asked questions
-            </Typography>
-            <br />
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              sx={{
-                cursor: "pointer",
-                transition: "color 0.3s ease",
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                "&:hover": { color: "grey" },
-              }}
-            >
-              <ForumIcon fontSize="medium" />
-              Stiil need help?Chat to us.
-            </Typography>
-          </Box>
-          {/* right side section of QA */}
-          <Box
-            sx={{
-              flex: 1,
-              padding: { xs: 1, md: 2 },
-              gap: 2,
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Accordion>
+          {faqs.map((faq, idx) => (
+            <Accordion key={idx}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 sx={{
                   flexDirection: "row-reverse",
-                  "&.MuiAccordionSummary-expandIconWrapper": {
-                    marginRight: "4px",
-                  },
+                  "& .MuiAccordionSummary-expandIconWrapper": { mr: 1 },
                 }}
               >
                 <Typography variant="subtitle1" fontWeight="bold">
-                  What do we do?
+                  {faq.question}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography variant="subtitle2">
-                  Millions of businesses of all sizes use our platform and APIs
-                  to accept payments and manage their businesses online.
-                </Typography>
+                <Typography variant="body2">{faq.answer}</Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                sx={{
-                  flexDirection: "row-reverse",
-                  "&.MuiAccordionSummary-expandIconWrapper": {
-                    marginRight: "4px",
-                  },
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold">
-                  Getting started with Untitled
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2">
-                  Millions of businesses of all sizes use our platform and APIs
-                  to accept payments and manage their businesses online.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                sx={{
-                  flexDirection: "row-reverse",
-                  "&.MuiAccordionSummary-expandIconWrapper": {
-                    marginRight: "4px",
-                  },
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold">
-                  Installing Untitle
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2">
-                  Millions of businesses of all sizes use our platform and APIs
-                  to accept payments and manage their businesses online.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                sx={{
-                  flexDirection: "row-reverse",
-                  "&.MuiAccordionSummary-expandIconWrapper": {
-                    marginRight: "4px",
-                  },
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold">
-                  The messenger
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2">
-                  Millions of businesses of all sizes use our platform and APIs
-                  to accept payments and manage their businesses online.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                sx={{
-                  flexDirection: "row-reverse",
-                  "&.MuiAccordionSummary-expandIconWrapper": {
-                    marginRight: "4px",
-                  },
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold">
-                  Our next-gen inbox
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2">
-                  Millions of businesses of all sizes use our platform and APIs
-                  to accept payments and manage their businesses online.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                sx={{
-                  flexDirection: "row-reverse",
-                  "&.MuiAccordionSummary-expandIconWrapper": {
-                    marginRight: "4px",
-                  },
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold">
-                  How do tickets work?
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2">
-                  Millions of businesses of all sizes use our platform and APIs
-                  to accept payments and manage their businesses online.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                sx={{
-                  flexDirection: "row-reverse",
-                  "&.MuiAccordionSummary-expandIconWrapper": {
-                    marginRight: "4px",
-                  },
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold">
-                  How does support work?
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2">
-                  Millions of businesses of all sizes use our platform and APIs
-                  to accept payments and manage their businesses online.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                sx={{
-                  bgcolor: "gre",
-                  flexDirection: "row-reverse",
-                  "&.MuiAccordionSummary-expandIconWrapper": {
-                    marginRight: "4px",
-                  },
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold">
-                  How does billing work?
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2">
-                  Millions of businesses of all sizes use our platform and APIs
-                  to accept payments and manage their businesses online.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </Box>
-        </Container>
-      </Box>
-    </>
+          ))}
+        </Box>
+      </Container>
+    </Box>
   );
 }
