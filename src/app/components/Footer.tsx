@@ -5,15 +5,37 @@ import {
   Typography,
   Button,
   IconButton,
-  Link,
+  Link as MuiLink,
   Container,
   useTheme,
 } from "@mui/material";
+
+import Link from "next/link";
+
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FaceBookIcon from "@mui/icons-material/Facebook";
+
+const LegalLinks = [
+  {
+    name: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+  {
+    name: "Terms",
+    href: "/terms-and-conditions",
+  },
+  {
+    name: "Cancellation & Refund",
+    href: "/cancellation-and-refund",
+  },
+  {
+    name: "Shipping & Delivery",
+    href: "/shipping-and-delivery",
+  },
+];
 
 export default function Footer() {
   const theme = useTheme();
@@ -159,8 +181,9 @@ export default function Footer() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    color="grey"
+                    // color="grey"
                     sx={{
+                      color: theme.palette.text.secondary,
                       cursor: "pointer",
                       transition: "color 0.3s ease",
                       "&:hover": {
@@ -541,28 +564,28 @@ export default function Footer() {
                 gap: { xs: 2, md: 0 },
               }}
             >
-              <Typography variant="subtitle2" color="grey">
-                © 2025 Stallion-LinearBytes Inc.
+              <Typography variant="subtitle2" sx={{ color: "grey" }}>
+                © 2025 Stallion-Grooming Inc.
               </Typography>
               <Box display="flex" gap={2}>
-                {["Privacy Policy", "Terms", "Code of Conduct"].map(
-                  (item, i) => (
-                    <Typography
-                      key={i}
-                      variant="subtitle2"
-                      color="grey"
-                      sx={{
-                        cursor: "pointer",
-                        "&:hover": {
-                          color:
-                            theme.palette.mode === "dark" ? "white" : "black",
-                        },
-                      }}
-                    >
-                      {item}
-                    </Typography>
-                  )
-                )}
+                {LegalLinks.map((item, i) => (
+                  <MuiLink
+                    href={item.href}
+                    component={Link}
+                    key={i}
+                    variant="subtitle2"
+                    sx={{
+                      color: "grey",
+                      cursor: "pointer",
+                      "&:hover": {
+                        color:
+                          theme.palette.mode === "dark" ? "white" : "black",
+                      },
+                    }}
+                  >
+                    {item.name}
+                  </MuiLink>
+                ))}
               </Box>
             </Box>
           </Box>

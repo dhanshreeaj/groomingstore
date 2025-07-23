@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ThemeRegistry from "./theme/ThemeRegistry";
 import ThemeToggleButton from "./components/Themetoggel";
-
+import NextTopLoader from "nextjs-toploader";
 export default function RootLayout({
   children,
 }: {
@@ -16,6 +16,8 @@ export default function RootLayout({
       <body>
         <CssBaseline />
         <ThemeRegistry>
+          <NextTopLoader height={5} color="#2B8F83" />
+
           <Navbar />
           {children}
           <Footer />
