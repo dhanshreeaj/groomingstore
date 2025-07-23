@@ -14,9 +14,40 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FaceBookIcon from "@mui/icons-material/Facebook";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Contact() {
   const theme = useTheme();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handlSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await axios.post("https://formspree.io/f/mblkgkpe", formData, {
+        headers: { Accept: "application/json" },
+      });
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending messsgae:", error);
+      alert("Failed to send message");
+    }
+  };
   return (
     <>
       {/* main containt  */}
@@ -50,7 +81,7 @@ export default function Contact() {
               will get back to you as soon as we can.
             </Typography>
 
-            {/* form section */}
+            {/* form  and contact detail section */}
             <Box
               sx={{
                 display: "flex",
@@ -60,10 +91,12 @@ export default function Contact() {
                 paddingY: { xs: 3, md: 2 },
               }}
             >
+              {/* form section */}
               <Box
                 component="form"
-                action="https://formspree.io/f/mblkgkpe"
-                method="POST"
+                onSubmit={handlSubmit}
+                //action="https://formspree.io/f/mblkgkpe"
+                // method="POST"
                 sx={{
                   display: "flex",
                   flexDirection: "column",
@@ -77,6 +110,9 @@ export default function Contact() {
                   variant="standard"
                   label="Name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   InputLabelProps={{ style: { color: "grey" } }}
                   InputProps={{
                     style: {
@@ -92,6 +128,9 @@ export default function Contact() {
                   variant="standard"
                   label="Email"
                   name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
                   InputLabelProps={{ style: { color: "grey" } }}
                   InputProps={{
                     style: {
@@ -106,7 +145,11 @@ export default function Contact() {
                 <TextField
                   variant="standard"
                   label="Message"
-                  name="nessage"
+                  name="message"
+                  multiline
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
                   InputLabelProps={{ style: { color: "grey" } }}
                   InputProps={{
                     style: {
@@ -131,6 +174,7 @@ export default function Contact() {
                   Send
                 </Button>
               </Box>
+              {/* contact details */}
               <Box
                 sx={{
                   display: "flex",
@@ -195,6 +239,12 @@ export default function Contact() {
                 </Box>
               </Box>
             </Box>
+            {/* message section after successful submited form */}
+            {submitted && (
+              <Typography variant="h2" fontWeight="bold" fontSize={30}>
+                Thanks for contacting us!!
+              </Typography>
+            )}
           </Box>
         </Container>
       </Box>
