@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Box, Typography, Button, Container, useTheme } from "@mui/material";
+import Link from "next/link";
 
 export default function Home() {
   const theme = useTheme();
@@ -46,6 +47,8 @@ export default function Home() {
             </Typography>
             <br />
             <Button
+              LinkComponent={Link}
+              href="/shop"
               sx={{
                 fontSize: { xs: "0.4rem", md: "1rem" },
                 textTransform: "none",

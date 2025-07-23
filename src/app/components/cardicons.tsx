@@ -7,12 +7,31 @@ import {
   Container,
   useTheme,
   Stack,
+  Divider,
 } from "@mui/material";
 
+// 1️⃣ Replace your USPS array with grooming‑focused points:
 const USPS = [
-  { title: "Automate Ecommerece Operation" },
-  { title: "Accurate Accounting Automation" },
-  { title: "Order Fulifilment Automation" },
+  {
+    title: "Premium Natural Ingredients",
+    desc: "Formulated with high‑quality oils and butters for healthier skin & hair.",
+  },
+  {
+    title: "Precision Formulas",
+    desc: "Each product targets specific needs like beard growth, hydration, or shine.",
+  },
+  {
+    title: "Eco‑Friendly Packaging",
+    desc: "Sustainable, recyclable materials that look and feel premium.",
+  },
+  {
+    title: "Fast Nationwide Delivery",
+    desc: "Get your grooming essentials delivered across India in 3–7 business days.",
+  },
+  {
+    title: "Expert Curation",
+    desc: "Handpicked and tested by professional barbers and grooming experts.",
+  },
 ];
 
 export default function CardIcon() {
@@ -59,7 +78,7 @@ export default function CardIcon() {
                 align="center"
                 sx={{ fontSize: { xs: "1.5rem", md: "3rem" } }}
               >
-                Unique Selling Point
+                Why Choose Stallion Grooming
               </Typography>
               <br></br>
               <Typography
@@ -67,10 +86,9 @@ export default function CardIcon() {
                 align="center"
                 sx={{ fontSize: { xs: "0.8rem", md: "1rem" } }}
               >
-                A unique selling proposition to the unique benifit exhibited{" "}
-                <br />
-                by a company, service product or brands that enabies it so stand
-                out from compotiotions.
+                At Stallion Grooming, we blend premium natural ingredients with
+                modern formulations to deliver effortless, effective grooming
+                solutions tailored for the modern man.
               </Typography>
               <br></br>
               {/*button part */}
@@ -91,7 +109,7 @@ export default function CardIcon() {
                     },
                   }}
                 >
-                  Get Started
+                  Shop Now{" "}
                 </Button>
               </Box>
             </Box>
@@ -104,38 +122,47 @@ export default function CardIcon() {
                 alignItems: { xs: "center", md: undefined },
               }}
             >
-              {USPS.map((usp) => {
-                return (
-                  <Box
-                    key={usp.title}
-                    sx={{
-                      display: "flex",
-                      backgroundColor: "black",
-                      width: { xs: 80, sm: 125, md: 250 },
-                      height: { xs: 120, sm: 150, md: 300 },
-                      borderRadius: "20px",
-                      bgcolor:
-                        theme.palette.mode === "dark" ? "white" : "black",
-                      color: theme.palette.mode === "dark" ? "black" : "white",
-                      "&:hover": {
-                        backgroundColor: "grey",
-                        cursor: "pointer",
-                      },
-                    }}
-                  >
-                    <Typography
-                      variant="h6"
-                      padding={2}
-                      sx={{
-                        fontSize: { xs: "0.4rem", sm: "0.8rem", md: "1rem" },
-                      }}
-                    >
-                      {usp.title}
-                    </Typography>
-                  </Box>
-                );
-              })}
-              {/* <Box
+              {USPS.map(({ title, desc }) => (
+                <Box
+                  key={title}
+                  sx={{
+                    p: 2,
+                    width: { xs: 120, sm: 200, md: 250 },
+                    borderRadius: 2,
+                    bgcolor: "black",
+                    aspectRatio: "1 / 1",
+                    "*": {
+                      textAlign: "center",
+                    },
+                    color: "white",
+                    "&:hover": { bgcolor: "grey", cursor: "pointer" },
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <Typography variant="h6" fontWeight="bold" gutterBottom>
+                    {title}
+                  </Typography>
+                  <Divider
+                    flexItem
+                    sx={{ mb: 3, borderBottomColor: "white" }}
+                  />
+                  <Typography variant="body2" align="center">
+                    {desc}
+                  </Typography>
+                </Box>
+              ))}
+            </Stack>
+          </Box>
+        </Container>
+      </Box>
+    </>
+  );
+}
+
+{
+  /* <Box
                 sx={{
                   display: "flex",
                   backgroundColor: "black",
@@ -185,11 +212,5 @@ export default function CardIcon() {
                 >
                   Order Fulifilment Automation
                 </Typography>
-              </Box> */}
-            </Stack>
-          </Box>
-        </Container>
-      </Box>
-    </>
-  );
+              </Box> */
 }

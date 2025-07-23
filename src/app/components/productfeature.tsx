@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Box, Typography, Button, Container, useTheme } from "@mui/material";
+import Link from "next/link";
 
 export default function ProductFeatures() {
   const theme = useTheme();
@@ -55,7 +56,7 @@ export default function ProductFeatures() {
                 fontWeight="bold"
                 sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" } }}
               >
-                Expert Technicians
+                Premium Natural Ingredients
               </Typography>
               <br />
               <Typography
@@ -66,8 +67,8 @@ export default function ProductFeatures() {
                   mt: 1,
                 }}
               >
-                Our certificated experts provide top-quality service. Trust us
-                for accurante diagonstics and repairs.
+                Formulated with high‑quality oils and butters to nourish skin
+                &amp; hair.
               </Typography>
               <br />
               <br />
@@ -77,7 +78,7 @@ export default function ProductFeatures() {
                 fontWeight="bold"
                 sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" } }}
               >
-                Fast Turnaround
+                Tailored Formulations
               </Typography>
               <br />
               <Typography
@@ -88,8 +89,7 @@ export default function ProductFeatures() {
                   mt: 1,
                 }}
               >
-                Get back on the road quickly with our effcient service.Most
-                repairs are completed within the same day.
+                Targeted solutions for beard growth, hydration, and styling.
               </Typography>
             </Box>
             {/*center containt */}
@@ -110,7 +110,7 @@ export default function ProductFeatures() {
                 fontWeight="bold"
                 sx={{ fontSize: { xs: "1.1rem", sm: "1.5rem", md: "2rem" } }}
               >
-                Why choose us?
+                Why Choose Stallion Grooming?
               </Typography>
               <br />
               <Typography
@@ -121,8 +121,9 @@ export default function ProductFeatures() {
                   mt: 1,
                 }}
               >
-                From route maintance to major repairs, We got your car coverd
-                with reliable and friendly service.
+                Experience effortless grooming with premium, natural
+                formulations and expert craftsmanship tailored for the modern
+                man.
               </Typography>
               <Box
                 sx={{
@@ -133,7 +134,7 @@ export default function ProductFeatures() {
                 }}
               >
                 <Image
-                  src="/productfeature.png"
+                  src="/assets/shampoo.png"
                   alt="Product Feature Image"
                   fill
                   style={{ objectFit: "cover" }}
@@ -147,7 +148,9 @@ export default function ProductFeatures() {
                 }}
               >
                 <Button
+                  LinkComponent={Link}
                   variant="outlined"
+                  href="/shop"
                   sx={{
                     fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" },
                     textTransform: "none",
@@ -160,7 +163,7 @@ export default function ProductFeatures() {
                     },
                   }}
                 >
-                  Get a Free quote
+                  Shop now
                 </Button>
               </Box>
             </Box>
@@ -182,7 +185,7 @@ export default function ProductFeatures() {
                 fontWeight="bold"
                 sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" } }}
               >
-                Affordable Pricing
+                Eco‑Friendly Packaging
               </Typography>
               <br />
               <Typography
@@ -193,8 +196,7 @@ export default function ProductFeatures() {
                   mt: 1,
                 }}
               >
-                High-quality repairs at prices you can afford.No hidden
-                fees,just honest and transparent pricing.
+                Sustainable, recyclable materials that look and feel premium.
               </Typography>
               <br />
               <br />
@@ -204,7 +206,7 @@ export default function ProductFeatures() {
                 fontWeight="bold"
                 sx={{ fontSize: { xs: "0.8rem", sm: "1.2rem", md: "1.3rem" } }}
               >
-                All-Inclusive Services
+                Fast Nationwide Delivery
               </Typography>
               <br />
               <Typography
@@ -215,8 +217,8 @@ export default function ProductFeatures() {
                   mt: 1,
                 }}
               >
-                From routine maintenace to complex repairs,we handle it all.You
-                one-stop shop for all your car care needs.
+                Get your grooming essentials delivered across India in 3–7
+                business days.
               </Typography>
             </Box>
           </Box>
