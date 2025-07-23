@@ -22,8 +22,8 @@ export default function Review() {
     flexDirection: "column",
     alignItems: "center",
     transition: "transform 0.2s ease-in-out",
-    bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-    color: theme.palette.mode === "dark" ? "black" : "white",
+    bgcolor: theme.palette.background.default,
+    color: theme.palette.text.secondary,
     "&:hover": {
       transform: "rotate(5deg)",
       backgroundColor: "grey",
@@ -121,7 +121,15 @@ export default function Review() {
   return (
     <>
       {/*main containt */}
-      <Box sx={{ display: "flex", padding: 2, justifyContent: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          padding: 2,
+          justifyContent: "center",
+          bgcolor: theme.palette.background.paper,
+          color: theme.palette.text.primary,
+        }}
+      >
         <Container maxWidth="xl">
           <Box
             display="flex"
@@ -151,7 +159,7 @@ export default function Review() {
                 textAlign: "center",
                 padding: 2,
                 justifyContent: "space-between",
-                color: theme.palette.mode === "dark" ? "white" : "black",
+                color: theme.palette.text.primary,
               }}
             >
               <Typography

@@ -51,8 +51,8 @@ export default function Footer() {
           py: { xs: 4, md: 8 },
           px: { xs: 2, md: 4 },
           justifyContent: "center",
-          bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-          color: theme.palette.mode === "dark" ? "black" : "white",
+          bgcolor: theme.palette.background.default,
+          color: theme.palette.text.secondary,
         }}
       >
         <Container maxWidth="xl">
@@ -63,8 +63,8 @@ export default function Footer() {
               p: { xs: 2, md: 4 },
               flexDirection: "column",
               borderRadius: "12px",
-              bgcolor: theme.palette.mode === "dark" ? "black" : "white",
-              color: theme.palette.mode === "dark" ? "white" : "black",
+              bgcolor: theme.palette.background.paper,
+              color: theme.palette.text.primary,
             }}
           >
             {/* first box part for socail media */}
@@ -140,9 +140,8 @@ export default function Footer() {
                   variant="outlined"
                   sx={{
                     mt: 2,
-                    bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                    color: theme.palette.mode === "dark" ? "black" : "white",
-                    borderRadius: "10px",
+                    bgcolor: theme.palette.background.default,
+                    color: theme.palette.text.secondary,
                     borderColor: "black",
                     "&:hover": {
                       bgcolor: "grey",

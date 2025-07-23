@@ -18,8 +18,8 @@ export default function Home() {
             py: { xs: 2, md: 15 },
             px: { xs: 2, md: 0 },
             gap: { xs: 4, md: 25 },
-            backgroundColor: "white",
-            bgcolor: theme.palette.mode === "dark" ? "black" : "white",
+            // bgcolor: theme.palette.mode === "dark" ? "black" : "white",
+            bgcolor: theme.palette.background.default,
           }}
         >
           {/*Left side text contenet */}
@@ -28,8 +28,11 @@ export default function Home() {
               maxWidth: { md: "50%" }, // Adjust maxWidth for larger screens
 
               flex: 1,
-              bgcolor: theme.palette.mode === "dark" ? "black" : "white",
-              color: theme.palette.mode === "dark" ? "white" : "black",
+              // bgcolor: theme.palette.mode === "dark" ? "black" : "white",
+              //color: theme.palette.mode === "dark" ? "white" : "black",
+              bgcolor: theme.palette.background.default,
+              color: theme.palette.text.secondary,
+
               textAlign: { xs: "center", md: "left" },
             }}
           >
@@ -55,8 +58,8 @@ export default function Home() {
               sx={{
                 fontSize: { xs: "0.4rem", md: "1rem" },
                 textTransform: "none",
-                bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                color: theme.palette.mode === "dark" ? "black" : "white",
+                bgcolor: theme.palette.background.paper,
+                color: theme.palette.text.primary,
                 "&:hover": {
                   bgcolor: "grey",
                   color: "black",

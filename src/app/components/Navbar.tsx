@@ -41,7 +41,8 @@ const Navbar = () => {
       direction={isMobail ? "column" : "row"}
       spacing={2}
       sx={{
-        bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+        bgcolor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
         paddingX: 1,
         paddingY: 0.5,
         borderRadius: "20px",
@@ -52,7 +53,7 @@ const Navbar = () => {
         <Link key={href} href={href} passHref>
           <Button
             sx={{
-              color: theme.palette.mode === "dark" ? "black" : "white",
+              color: theme.palette.text.primary,
               textTransform: "none",
             }}
           >
@@ -64,13 +65,12 @@ const Navbar = () => {
   );
   return (
     <AppBar
-      position="static"
+      // position="static"
       sx={{
         backgroundColor: "black",
         boxShadow: "none",
         padding: 1,
-        bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-        color: theme.palette.mode === "dark" ? "black" : "white",
+        bgcolor: theme.palette.background.paper,
       }}
     >
       <Container maxWidth="xl">
@@ -80,9 +80,20 @@ const Navbar = () => {
 
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/*Left side brand name */}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             {isMobail && (
-              <IconButton color="inherit" onClick={toggleDrawer(true)}>
+              <IconButton
+                color="inherit"
+                onClick={toggleDrawer(true)}
+                sx={{
+                  color: theme.palette.text.primary,
+                }}
+              >
                 <MenuIcon />
               </IconButton>
             )}
@@ -90,8 +101,7 @@ const Navbar = () => {
             <Link href="/" style={{ textDecoration: "none" }}>
               <Box
                 sx={{
-                  backgroundColor:
-                    theme.palette.mode === "dark" ? "black" : "white",
+                  bgcolor: theme.palette.background.default,
                   WebkitMask: 'url("/logo.png") no-repeat center / contain',
                   mask: 'url("/logo.png") no-reap center / contain',
                   width: 60,
@@ -105,7 +115,7 @@ const Navbar = () => {
                 variant="h6"
                 fontWeight="bold"
                 sx={{
-                  color: theme.palette.mode === "dark" ? "black" : "white",
+                  color: theme.palette.text.primary,
                   "&:hover": {
                     color: "pink",
                   },
@@ -137,7 +147,7 @@ const Navbar = () => {
                 alignItems: "center",
                 paddingY: 4,
                 paddingX: 2,
-                bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+                bgcolor: theme.palette.background.paper,
                 height: "100%",
                 width: 250,
               }}
@@ -148,8 +158,8 @@ const Navbar = () => {
                   variant="contained"
                   sx={{
                     textTransform: "none",
-                    backgroundColor: "grey",
-                    color: "white",
+                    bgcolor: theme.palette.background.default,
+                    color: theme.palette.text.secondary,
                     "&:hover": {
                       backgroundColor: "black",
                     },
@@ -165,16 +175,20 @@ const Navbar = () => {
           </Drawer>
 
           {/*Right side icons */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 2,
+              bgcolor: theme.palette.background.paper,
+              color: theme.palette.text.primary,
+            }}
+          >
             <ThemeToggleButton />
-            <IconButton
-              sx={{ color: theme.palette.mode === "dark" ? "black" : "white" }}
-            >
+            <IconButton sx={{ color: theme.palette.text.primary }}>
               <SearchIcon />
             </IconButton>
-            <IconButton
-              sx={{ color: theme.palette.mode === "dark" ? "black" : "white" }}
-            >
+            <IconButton sx={{ color: theme.palette.text.primary }}>
               <ShoppingBagIcon />
             </IconButton>
             {!isMobail && (
@@ -182,8 +196,8 @@ const Navbar = () => {
                 variant="contained"
                 sx={{
                   textTransform: "none",
-                  backgroundColor: "grey",
-                  color: "white",
+                  bgcolor: theme.palette.background.default,
+                  color: theme.palette.text.secondary,
                   "&:hover": {
                     backgroundColor: "black",
                   },

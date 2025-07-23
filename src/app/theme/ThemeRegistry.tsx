@@ -9,11 +9,12 @@ import React, {
 } from "react";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 
-type ThemeMode = "light" | "dark";
+type ThemeMode = "light" | "dark" | "purple" | "red";
 
 interface ThemeContextProps {
   mode: ThemeMode;
   toggleTheme: () => void;
+  setTheme: (theme: ThemeMode) => void;
 }
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
@@ -27,6 +28,10 @@ export const useCustomTheme = () => {
 
 export default function ThemeRegistry({ children }: { children: ReactNode }) {
   const [mode, setMode] = useState<ThemeMode>("light");
+  const setTheme = (theme: ThemeMode) => {
+    setMode(theme);
+    localStorage.setItem("theme", theme);
+  };
 
   useEffect(() => {
     const saved = localStorage.getItem("theme") as ThemeMode;
@@ -39,10 +44,54 @@ export default function ThemeRegistry({ children }: { children: ReactNode }) {
     localStorage.setItem("theme", next);
   };
 
-  const theme = useMemo(() => createTheme({ palette: { mode } }), [mode]);
+  //const theme = useMemo(() => createTheme({ palette: { mode } }), [mode]);
+
+  const theme = useMemo(() => {
+    if (mode === "light") {
+      return createTheme({
+        palette: {
+          mode: "light",
+          primary: { main: "#f5f5f5ff" },
+          background: { default: "#ffffffff", paper: "#000000ff" },
+          text: { primary: "#fffcfcff", secondary: "#000000ff" },
+        },
+      });
+    }
+    if (mode === "dark") {
+      return createTheme({
+        palette: {
+          mode: "light",
+          primary: { main: "#000000ff" },
+          background: { default: "#000000ff", paper: "#ffffffff" },
+          text: { primary: "#000000ff", secondary: "#fdfdfdff" },
+        },
+      });
+    }
+    if (mode === "purple") {
+      return createTheme({
+        palette: {
+          mode: "light",
+          primary: { main: "#6a0dad" },
+          background: { default: "#f5e6ff", paper: "#b86eecff" },
+          text: { primary: "#2a0952ff", secondary: "#4a148c" },
+        },
+      });
+    }
+    if (mode === "red") {
+      return createTheme({
+        palette: {
+          mode: "light",
+          primary: { main: "#d32f2f" },
+          background: { default: "#ffe6e6", paper: "#f79f9fff" },
+          text: { primary: "#b71c1c", secondary: "#b71c1c" },
+        },
+      });
+    }
+    return createTheme({ palette: { mode } });
+  }, [mode]);
 
   return (
-    <ThemeContext.Provider value={{ mode, toggleTheme }}>
+    <ThemeContext.Provider value={{ mode, toggleTheme, setTheme }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {children}

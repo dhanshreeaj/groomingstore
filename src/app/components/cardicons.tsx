@@ -65,8 +65,8 @@ export default function CardIcon() {
             alignItems: "center",
             paddingY: { xs: 2, md: 4 },
             width: "100%",
-            bgcolor: theme.palette.mode === "dark" ? "black" : "white",
-            color: theme.palette.mode === "dark" ? "white" : "black",
+            bgcolor: theme.palette.background.default,
+            color: theme.palette.text.secondary,
           }}
         >
           {/*text part */}
@@ -128,12 +128,12 @@ export default function CardIcon() {
                   p: 2,
                   width: { xs: 120, sm: 200, md: 250 },
                   borderRadius: 2,
-                  bgcolor: "black",
+                  bgcolor: theme.palette.background.paper,
                   aspectRatio: "1 / 1",
                   "*": {
                     textAlign: "center",
                   },
-                  color: "white",
+                  color: theme.palette.text.primary,
                   "&:hover": { bgcolor: "grey", cursor: "pointer" },
                   display: "flex",
                   flexDirection: "column",
@@ -143,7 +143,10 @@ export default function CardIcon() {
                 <Typography variant="h6" fontWeight="bold" gutterBottom>
                   {title}
                 </Typography>
-                <Divider flexItem sx={{ mb: 3, borderBottomColor: "white" }} />
+                <Divider
+                  flexItem
+                  sx={{ mb: 3, borderBottomColor: theme.palette.text.primary }}
+                />
                 <Typography variant="body2" align="center">
                   {desc}
                 </Typography>

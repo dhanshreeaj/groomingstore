@@ -13,7 +13,7 @@ export default function ProductFeatures() {
           display: "flex",
           padding: { xs: 2, sm: 4, md: 8 },
           justifyContent: "center",
-          bgcolor: theme.palette.mode === "dark" ? "black" : "white",
+          bgcolor: theme.palette.background.paper,
         }}
       >
         <Container
@@ -32,7 +32,7 @@ export default function ProductFeatures() {
               flexDirection: { xs: "column", md: "row" },
               justifyContent: "space-between",
               alignItems: "center",
-              bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+              bgcolor: theme.palette.background.default,
               width: { xs: "100%", sm: 500, md: "100%" },
               height: "auto",
               padding: { xs: 0.5, sm: 3, md: 6 },
@@ -46,8 +46,8 @@ export default function ProductFeatures() {
                 textAlign: "center",
                 borderRadius: "15px",
                 justifyContent: "center",
-                bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                color: theme.palette.mode === "dark" ? "black" : "white",
+                bgcolor: theme.palette.background.default,
+                color: theme.palette.text.secondary,
               }}
             >
               <Typography
@@ -100,8 +100,8 @@ export default function ProductFeatures() {
                 alignItems: "center",
                 flexDirection: "column",
                 padding: { xs: 2, sm: 3, md: 4 },
-                bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                color: theme.palette.mode === "dark" ? "black" : "white",
+                bgcolor: theme.palette.background.default,
+                color: theme.palette.text.secondary,
               }}
             >
               <Typography
@@ -175,8 +175,8 @@ export default function ProductFeatures() {
                 backgroundColor: "black",
                 borderRadius: "15px",
                 justifyContent: "center",
-                bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                color: theme.palette.mode === "dark" ? "black" : "white",
+                bgcolor: theme.palette.background.default,
+                color: theme.palette.text.secondary,
               }}
             >
               <Typography

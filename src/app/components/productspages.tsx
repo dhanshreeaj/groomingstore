@@ -23,8 +23,8 @@ export default function ProductsPages() {
           gap: 2,
           alignItems: "center",
           flexDirection: "column",
-          bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-          color: theme.palette.mode === "dark" ? "black" : "white",
+          bgcolor: theme.palette.background.default,
+          color: theme.palette.text.secondary,
         }}
       >
         <Container
@@ -46,8 +46,8 @@ export default function ProductsPages() {
               gap: { xs: 0.8, md: 1.5 },
               paddingY: { xs: 2, md: 4 },
               marginBottom: 2,
-              bgcolor: theme.palette.mode === "dark" ? "black" : "white",
-              color: theme.palette.mode === "dark" ? "white" : "black",
+              bgcolor: theme.palette.background.paper,
+              color: theme.palette.text.primary,
             }}
           >
             {/*left section */}
@@ -78,8 +78,8 @@ export default function ProductsPages() {
                 <Button
                   variant="outlined"
                   sx={{
-                    bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                    color: theme.palette.mode === "dark" ? "black" : "white",
+                    bgcolor: theme.palette.background.default,
+                    color: theme.palette.text.secondary,
                     textTransform: "none",
                     borderRadius: "10px",
                     borderColor: "black",
@@ -94,8 +94,8 @@ export default function ProductsPages() {
                 <Button
                   variant="outlined"
                   sx={{
-                    color: "black",
-                    bgcolor: "white",
+                    bgcolor: theme.palette.background.default,
+                    color: theme.palette.text.secondary,
                     borderColor: "black",
                     textTransform: "none",
                     borderRadius: "10px",
@@ -186,8 +186,8 @@ export default function ProductsPages() {
               width: { xs: "100%" },
               gap: { xs: 2, md: 1.5 },
               p: { xs: 2, md: 3 },
-              bgcolor: theme.palette.mode === "dark" ? "black" : "white",
-              color: theme.palette.mode === "dark" ? "black" : "white",
+              bgcolor: theme.palette.background.paper,
+              color: theme.palette.text.primary,
             }}
           >
             {/*product image by category */}
@@ -195,7 +195,7 @@ export default function ProductsPages() {
               sx={{
                 flex: 1,
                 textAlign: "center",
-                color: theme.palette.mode === "dark" ? "white" : "black",
+                color: theme.palette.text.primary,
               }}
             >
               <Typography
@@ -259,7 +259,7 @@ export default function ProductsPages() {
               sx={{
                 flex: 1,
                 textAlign: { xs: "center", md: "left" },
-                color: theme.palette.mode === "dark" ? "white" : "black",
+                color: theme.palette.text.primary,
               }}
             >
               <Typography
@@ -282,8 +282,8 @@ export default function ProductsPages() {
                 <Button
                   variant="outlined"
                   sx={{
-                    bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                    color: theme.palette.mode === "dark" ? "black" : "white",
+                    bgcolor: theme.palette.background.default,
+                    color: theme.palette.text.secondary,
                     textTransform: "none",
                     borderRadius: "30px",
                     borderColor: "black",
@@ -298,8 +298,8 @@ export default function ProductsPages() {
                 <Button
                   variant="outlined"
                   sx={{
-                    bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-                    color: theme.palette.mode === "dark" ? "black" : "white",
+                    bgcolor: theme.palette.background.default,
+                    color: theme.palette.text.secondary,
                     borderColor: "black",
                     textTransform: "none",
                     borderRadius: "15px",
