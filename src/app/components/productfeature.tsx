@@ -33,7 +33,7 @@ export default function ProductFeatures() {
               justifyContent: "space-between",
               alignItems: "center",
               bgcolor: theme.palette.mode === "dark" ? "white" : "black",
-              width: { xs: "100%", sm: 500, md: 900 },
+              width: { xs: "100%", sm: 500, md: "100%" },
               height: "auto",
               padding: { xs: 0.5, sm: 3, md: 6 },
             }}

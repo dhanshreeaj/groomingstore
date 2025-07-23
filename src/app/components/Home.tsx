@@ -15,7 +15,8 @@ export default function Home() {
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
-            padding: { xs: 2, md: 15 },
+            py: { xs: 2, md: 15 },
+            px: { xs: 2, md: 0 },
             gap: { xs: 4, md: 25 },
             backgroundColor: "white",
             bgcolor: theme.palette.mode === "dark" ? "black" : "white",
@@ -24,6 +25,8 @@ export default function Home() {
           {/*Left side text contenet */}
           <Box
             sx={{
+              maxWidth: { md: "50%" }, // Adjust maxWidth for larger screens
+
               flex: 1,
               bgcolor: theme.palette.mode === "dark" ? "black" : "white",
               color: theme.palette.mode === "dark" ? "white" : "black",
@@ -67,10 +70,12 @@ export default function Home() {
           {/*Image section */}
           <Box
             sx={{
-              flex: 1,
+              // flex: 1,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              width: { xs: 200, md: 350 },
+              height: { xs: 200, md: 350 },
             }}
           >
             <Box

@@ -30,25 +30,69 @@ export default function Review() {
     mx: "auto",
   };
 
-  const Card = () => (
+  interface ReviewCardProps {
+    name: string;
+    avatarUrl?: string;
+    review: string;
+  }
+
+  const Card: React.FC<ReviewCardProps> = ({ name, avatarUrl, review }) => (
     <Box sx={cardStyles}>
-      <IconButton onClick={() => alert("Profile clicked")}>
-        <Avatar />
+      <IconButton>
+        <Avatar src={avatarUrl} alt={name} />
       </IconButton>
       <Typography variant="subtitle1" fontWeight="bold" mt={1}>
-        User Name
+        {name}
       </Typography>
       <Typography
-        variant="h6"
-        fontSize={{ xs: 12, sm: 15 }}
+        variant="body2"
         align="center"
-        mt={1}
+        sx={{ fontSize: { xs: 12, sm: 15 }, mt: 1 }}
       >
-        If you are not using testimonials, you’re missing out on a golden
-        opportunity to turn visitors and potential buyers into actual customers.
+        {review}
       </Typography>
     </Box>
   );
+
+  const reviews: ReviewCardProps[] = [
+    {
+      name: "Rahul Sharma",
+      avatarUrl: "/avatars/rahul.jpg",
+      review:
+        "Stallion Grooming’s beard oil has transformed my routine—my beard has never felt softer!",
+    },
+    {
+      name: "Arun Patel",
+      avatarUrl: "/avatars/arun.jpg",
+      review:
+        "Excellent products and quick delivery. My skin feels healthier every day.",
+    },
+    {
+      name: "Vikram Singh",
+      avatarUrl: "/avatars/vikram.jpg",
+      review:
+        "Top‑notch customer service and quality. The shave cream is a game‑changer.",
+    },
+    {
+      name: "Manish Kumar",
+      avatarUrl: "/avatars/manish.jpg",
+      review:
+        "Love the natural ingredients—no irritation and great scent. Highly recommend!",
+    },
+    {
+      name: "Anil Kapoor",
+      avatarUrl: "/avatars/anil.jpg",
+      review:
+        "Eco‑friendly packaging and premium feel. Will definitely reorder soon.",
+    },
+    {
+      name: "Ravi Desai",
+      avatarUrl: "/avatars/ravi.jpg",
+      review:
+        "Fantastic value for money. Delivery was on time and products exceeded expectations.",
+    },
+  ];
+
   return (
     <>
       {/*main containt */}
@@ -60,7 +104,7 @@ export default function Review() {
             alignItems="center"
             gap={4}
           >
-            <Button
+            {/* <Button
               variant="outlined"
               sx={{
                 bgcolor: theme.palette.mode === "dark" ? "white" : "black",
@@ -74,9 +118,9 @@ export default function Review() {
                 },
               }}
             >
-              Testimonials
-            </Button>
-            {/*title containt */}
+              Read Customer Reviews
+            </Button> */}
+            {/*title & intro  */}
             <Box
               sx={{
                 textAlign: "center",
@@ -86,21 +130,21 @@ export default function Review() {
               }}
             >
               <Typography
-                variant="subtitle1"
+                variant="h4"
                 fontWeight="bold"
-                fontSize={30}
                 align="center"
+                gutterBottom
               >
-                Our Trusted clients
+                What Our Customers Say
               </Typography>
               <Typography
                 variant="subtitle2"
                 fontSize={{ xs: 13, sm: 15 }}
                 mt={1}
               >
-                Our mission is to progress enhance the lives of our customers by
-                delivering <br />
-                superior products and services that exceed expectation.
+                Discover why men across India trust Stallion Grooming for
+                premium, natural grooming essentials. From beard care to
+                skincare, our products are designed for effortless confidence.
               </Typography>
             </Box>
 
@@ -123,9 +167,9 @@ export default function Review() {
                   alignItems: "center",
                 }}
               >
-                <Card />
-                <Card />
-                <Card />
+                {reviews.slice(0, 3).map((r) => (
+                  <Card key={r.name} {...r} />
+                ))}
               </Box>
               {/* second row */}
               <Box
@@ -137,9 +181,9 @@ export default function Review() {
                   alignItems: "center",
                 }}
               >
-                <Card />
-                <Card />
-                <Card />
+                {reviews.slice(3, 6).map((r) => (
+                  <Card key={r.name} {...r} />
+                ))}
               </Box>
             </Box>
           </Box>
