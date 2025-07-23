@@ -12,8 +12,10 @@ import { Avatar } from "@mui/material";
 export default function Review() {
   const theme = useTheme();
   const cardStyles = {
-    width: { xs: "90%", sm: 280 },
-    height: "auto",
+    width: { xs: "90%", sm: 280, md: 350 },
+    height: { sm: 280, md: 350 },
+    // height: "auto",
+    // aspectRatio: "1/1",
     borderRadius: "15px",
     display: "flex",
     padding: 2,
@@ -27,7 +29,7 @@ export default function Review() {
       backgroundColor: "grey",
       boxShadow: "0px 8px 20px rgba(0,0,0,0.3)",
     },
-    mx: "auto",
+    // mx: "auto",
   };
 
   interface ReviewCardProps {
@@ -58,38 +60,61 @@ export default function Review() {
     {
       name: "Rahul Sharma",
       avatarUrl: "/avatars/rahul.jpg",
-      review:
-        "Stallion Grooming’s beard oil has transformed my routine—my beard has never felt softer!",
+      review: `
+      Stallion Grooming’s beard oil has completely transformed my daily routine. 
+      The lightweight, non-greasy formula absorbs in seconds, leaving my beard softer 
+      and more manageable than ever. I’ve noticed less itching and more shine, and 
+      the subtle sandalwood scent is both fresh and masculine.
+    `.trim(),
     },
     {
       name: "Arun Patel",
       avatarUrl: "/avatars/arun.jpg",
-      review:
-        "Excellent products and quick delivery. My skin feels healthier every day.",
+      review: `
+      I’ve struggled with dry, flaky skin for years, but Stallion’s moisturizer 
+      and face wash combo has made a huge difference. My skin feels hydrated 
+      all day without any greasy residue, and I’ve seen a noticeable reduction 
+      in redness. Plus, the products arrived in stylish, eco-friendly packaging.
+    `.trim(),
     },
     {
       name: "Vikram Singh",
       avatarUrl: "/avatars/vikram.jpg",
-      review:
-        "Top‑notch customer service and quality. The shave cream is a game‑changer.",
+      review: `
+      From ordering to first use, the experience was flawless. The shave cream 
+      lathers beautifully and provides a super-smooth shave without any nicks or 
+      irritation. Their customer support answered my questions within hours, and 
+      delivery was right on schedule.
+    `.trim(),
     },
     {
       name: "Manish Kumar",
       avatarUrl: "/avatars/manish.jpg",
-      review:
-        "Love the natural ingredients—no irritation and great scent. Highly recommend!",
+      review: `
+      I was initially skeptical about natural grooming products, but Stallion’s 
+      line truly delivers. My skin feels clearer and more balanced, and the subtle 
+      cedarwood scent lasts through the day. It’s now my go-to brand for daily care.
+    `.trim(),
     },
     {
       name: "Anil Kapoor",
       avatarUrl: "/avatars/anil.jpg",
-      review:
-        "Eco‑friendly packaging and premium feel. Will definitely reorder soon.",
+      review: `
+      The eco-friendly packaging caught my eye, and the premium feel kept me 
+      coming back. Every bottle is crafted with attention to detail, and I love 
+      knowing I’m supporting a sustainable brand. Will definitely be gifting 
+      these to my friends.
+    `.trim(),
     },
     {
       name: "Ravi Desai",
       avatarUrl: "/avatars/ravi.jpg",
-      review:
-        "Fantastic value for money. Delivery was on time and products exceeded expectations.",
+      review: `
+      Exceptional value for money. The starter kit was affordably priced, and 
+      refills help keep costs down. All items arrived well-packaged, and the 
+      delivery was prompt. Highly recommend for anyone looking to upgrade 
+      their grooming routine.
+    `.trim(),
     },
   ];
 
@@ -125,7 +150,7 @@ export default function Review() {
               sx={{
                 textAlign: "center",
                 padding: 2,
-                justifyContent: "center",
+                justifyContent: "space-between",
                 color: theme.palette.mode === "dark" ? "white" : "black",
               }}
             >
@@ -154,7 +179,7 @@ export default function Review() {
                 display: "flex",
                 flexDirection: "column",
                 gap: { xs: 4, md: 6 },
-                width: { xs: "100%", sm: "90%", md: 1100 },
+                width: { xs: "100%" },
               }}
             >
               {/*first row */}
@@ -163,7 +188,7 @@ export default function Review() {
                   display: "flex",
                   flexDirection: { xs: "column", sm: "row" },
                   gap: { xs: 3, sm: 5, md: 10 },
-                  justifyContent: "center",
+                  justifyContent: "space-between",
                   alignItems: "center",
                 }}
               >
@@ -177,7 +202,7 @@ export default function Review() {
                   display: "flex",
                   flexDirection: { xs: "column", sm: "row" },
                   gap: { xs: 3, sm: 5, md: 10 },
-                  justifyContent: "center",
+                  justifyContent: "space-between",
                   alignItems: "center",
                 }}
               >
