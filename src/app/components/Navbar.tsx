@@ -22,9 +22,7 @@ import ThemeToggleButton from "./Themetoggel";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const navLinks = [
-  { href: "/products", label: "Product" },
   { href: "/faq", label: "FAQ" },
-  { href: "/productdetails", label: "Product Details" },
   { href: "/shop", label: "Shop/ Pricing" },
   { href: "/contact", label: "Contact Us" },
   { href: "/about", label: "About Us" },

@@ -8,6 +8,7 @@ import {
   Link as MuiLink,
   Container,
   useTheme,
+  Stack,
 } from "@mui/material";
 
 import Link from "next/link";
@@ -35,6 +36,8 @@ const LegalLinks = [
     name: "Shipping & Delivery",
     href: "/shipping-and-delivery",
   },
+  { href: "/products", name: "Product" },
+  { href: "/productdetails", name: "Product Details" },
 ];
 
 export default function Footer() {
@@ -567,7 +570,12 @@ export default function Footer() {
               <Typography variant="subtitle2" sx={{ color: "grey" }}>
                 © 2025 Stallion-Grooming Inc.
               </Typography>
-              <Box display="flex" gap={2}>
+              <Stack
+                direction={"row"}
+                justifyContent={"space-evenly"}
+                flexWrap={"wrap"}
+                gap={2}
+              >
                 {LegalLinks.map((item, i) => (
                   <MuiLink
                     href={item.href}
@@ -586,7 +594,7 @@ export default function Footer() {
                     {item.name}
                   </MuiLink>
                 ))}
-              </Box>
+              </Stack>
             </Box>
           </Box>
         </Container>
