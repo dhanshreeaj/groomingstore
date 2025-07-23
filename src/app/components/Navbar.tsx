@@ -95,6 +95,10 @@ const Navbar = () => {
       }}
     >
       <Container maxWidth="xl">
+        <Box sx={{ background: "red", textAlign: "center" }}>
+          Site Under Progress
+        </Box>
+
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/*Left side brand name */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
