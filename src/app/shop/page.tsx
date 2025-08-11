@@ -1,7 +1,7 @@
 // File: components/ShopPage.tsx
 
 "use client";
-
+import dynamic from "next/dynamic";
 import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import {
@@ -26,24 +26,25 @@ import News from "./News";
 import ProductFeat from "./productfeat";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
+import NewProduct from "./newproducts";
 
 type FilterOption = string;
 
-// interface Product {
-//   id: number;
-//   src: string;
-//   name: string;
-//   price: number;
-// }
-
 interface Product {
   id: number;
+  src: string;
   name: string;
   price: number;
-  stock: number;
-  description: string;
-  imageUrl?: string;
 }
+
+// interface Product {
+//   id: number;
+//   name: string;
+//   price: number;
+//   stock: number;
+//   description: string;
+//   imageUrl?: string;
+// }
 const laptopOptions: FilterOption[] = [
   'Fits 15.6" Laptop',
   'Fits 16" Laptop',
@@ -53,12 +54,12 @@ const laptopOptions: FilterOption[] = [
 const outfitOptions: FilterOption[] = ["1-2", "2-4", "4-6"];
 const shopByOptions: FilterOption[] = ["HP", "Apple", "Lenovo"];
 
-// const products: Product[] = [
-//   { id: 1, src: "/assets/facewash.png", name: "Facewash", price: 199 },
-//   { id: 2, src: "/assets/shampoo.png", name: "Shampoo", price: 199 },
-//   { id: 3, src: "/assets/hair_wax.png", name: "Hair wax", price: 149 },
-//   // add more as needed...
-// ];
+const products: Product[] = [
+  { id: 1, src: "/assets/facewash.png", name: "Facewash", price: 199 },
+  { id: 2, src: "/assets/shampoo.png", name: "Shampoo", price: 199 },
+  { id: 3, src: "/assets/hair_wax.png", name: "Hair wax", price: 149 },
+  // add more as needed...
+];
 
 // function FilterSection({
 //   title,
@@ -113,15 +114,15 @@ function ProductCard({ product }: { product: Product }) {
         color: "text.secondary",
       }}
     >
-      {/* <Image
+      <Image
         src={product.src}
         alt={product.name}
         width={180}
         height={180}
         style={{ objectFit: "cover", borderRadius: 8 }}
-      /> */}
+      />
 
-      {product.imageUrl && (
+      {/* {product.imageUrl && (
         <CardMedia
           component="img"
           height="140"
@@ -129,17 +130,17 @@ function ProductCard({ product }: { product: Product }) {
           alt={product.name}
           sx={{ height: 140, objectFit: "contain", mb: 1 }}
         />
-      )}
+      )} */}
       <Typography variant="subtitle1" fontWeight="bold" mt={2}>
         {product.name}
       </Typography>
       <Typography variant="body1" fontWeight="bold">
         ₹{product.price}
       </Typography>
-      <Typography variant="body2">{product.description}</Typography>
+      {/* <Typography variant="body2">{product.description}</Typography>
       <Typography variant="caption" display="block">
         Stock: {product.stock}
-      </Typography>
+      </Typography> */}
     </Box>
   );
 }
@@ -150,7 +151,7 @@ export default function ShopPage() {
   const [outfits, setOutfits] = useState<FilterOption[]>([]);
   const [shopBy, setShopBy] = useState<FilterOption[]>([]);
   const [page, setPage] = useState(1);
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
 
   const toggle =
     (
@@ -169,23 +170,23 @@ export default function ShopPage() {
     []
   );
 
-  const [products, setProducts] = useState<Product[]>([]);
-  const API_BASE_URL =
-    process.env.NODE_ENV === "production"
-      ? "https://api.stalliongrooming.com"
-      : "http://localhost:3001";
+  // const [products, setProducts] = useState<Product[]>([]);
+  // const API_BASE_URL =
+  //   process.env.NODE_ENV === "production"
+  //     ? "https://api.stalliongrooming.com"
+  //     : "http://localhost:3001";
 
-  const fetchProducts = async () => {
-    try {
-      const res = await axios.get<Product[]>(`${API_BASE_URL}/products`);
-      setProducts(res.data);
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    }
-  };
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  // const fetchProducts = async () => {
+  //   try {
+  //     const res = await axios.get<Product[]>(`${API_BASE_URL}/products`);
+  //     setProducts(res.data);
+  //   } catch (error) {
+  //     console.error("Error fetching products:", error);
+  //   }
+  // };
+  // useEffect(() => {
+  //   fetchProducts();
+  // }, []);
 
   return (
     <Container maxWidth="xl">
@@ -278,61 +279,14 @@ export default function ShopPage() {
               gap: 3,
             }}
           >
-            {/* {products.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))} */}
-
             {products.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
 
-            {/* {products.map((product) => (
-              <Card
-                key={product.id}
-                sx={{
-                  width: 200,
-                  textAlign: "center",
-                  boxShadow: 3,
-                  borderRadius: 3,
-                  p: 2,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                {product.imageUrl && (
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={product.imageUrl}
-                    alt={product.name}
-                    sx={{ height: 140, objectFit: "contain", mb: 1 }}
-                  />
-                )}
-                <Typography variant="h6">{product.name}</Typography>
-                <Typography color="text.secondary">
-                  ₹ {product.price}
-                </Typography>
-                <Typography variant="body2">{product.description}</Typography>
-                <Typography variant="caption" display="block">
-                  Stock: {product.stock}
-                </Typography>
-                {/* <Link href="/payment" passHref> */}
-            {/* <Button
-                  variant="contained"
-                  sx={{
-                    mt: 1,
-                    bgcolor: "grey.800",
-                    "&:hover": { bgcolor: "grey.700" },
-                    borderRadius: 1,
-                    px: 3,
-                  }}
-                >
-                  Buy
-                </Button> */}
-            {/* </Link> */}
-            {/* </Card>
+            {/* {products.map((p) => (
+              <ProductCard key={p.id} product={p} />
             ))} */}
+            <NewProduct />
           </Box>
 
           {/* Pagination */}
