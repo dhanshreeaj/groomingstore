@@ -154,21 +154,23 @@ const Navbar = () => {
             >
               {/* Show logo inside drawer for mobile */}
               {isMobail && (
-                <Button
-                  variant="contained"
-                  sx={{
-                    textTransform: "none",
-                    bgcolor: theme.palette.background.default,
-                    color: theme.palette.text.primary,
-                    "&:hover": {
-                      backgroundColor: "grey",
-                    },
-                    borderRadius: "20px",
-                    paddingX: 1,
-                  }}
-                >
-                  Login
-                </Button>
+                <Link href="/signin" style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      textTransform: "none",
+                      bgcolor: theme.palette.background.default,
+                      color: theme.palette.text.primary,
+                      "&:hover": {
+                        backgroundColor: "grey",
+                      },
+                      borderRadius: "20px",
+                      paddingX: 1,
+                    }}
+                  >
+                    Login
+                  </Button>
+                </Link>
               )}
               <NavButtons />
             </Box>
@@ -192,7 +194,7 @@ const Navbar = () => {
               <ShoppingBagIcon />
             </IconButton>
             {!isMobail && (
-              <Link href="/login" style={{ textDecoration: "none" }}>
+              <Link href="/signin" style={{ textDecoration: "none" }}>
                 <Button
                   variant="contained"
                   sx={{
